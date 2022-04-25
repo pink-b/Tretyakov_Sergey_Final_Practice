@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.6.9 on linux)" generated="20220425 15:03:34.247" rpa="false" schemaversion="3">
+<suite id="s1" name="Tretyakov Sergey Final Practice" source="/home/sergey/PycharmProjects/Tretyakov_Sergey_Final_Practice">
+<suite id="s1-s1" name="Test Cases" source="/home/sergey/PycharmProjects/Tretyakov_Sergey_Final_Practice/test_cases">
+<suite id="s1-s1-s1" name="Test Cases" source="/home/sergey/PycharmProjects/Tretyakov_Sergey_Final_Practice/test_cases/test_cases.robot">
+<test id="s1-s1-s1-t1" name="Test Case 1.1" line="6">
+<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
+<arg>https://inventory.edu-netcracker.com/pages/registration.xhtml</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220425 15:03:34.397" level="INFO">Opening browser 'chrome' to base url 'https://inventory.edu-netcracker.com/pages/registration.xhtml'.</msg>
+<status status="PASS" starttime="20220425 15:03:34.397" endtime="20220425 15:03:36.008"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:registerForm:username</arg>
+<arg>${random_username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220425 15:03:36.010" level="INFO">Typing text 'Ssergexxx2305' into text field 'id:registerForm:username'.</msg>
+<status status="PASS" starttime="20220425 15:03:36.009" endtime="20220425 15:03:36.115"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:registerForm:password</arg>
+<arg>19032001stR+</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220425 15:03:36.116" level="INFO">Typing text '19032001stR+' into text field 'id:registerForm:password'.</msg>
+<status status="PASS" starttime="20220425 15:03:36.115" endtime="20220425 15:03:36.220"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:registerForm:confirmPassword</arg>
+<arg>19032001stR+</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220425 15:03:36.221" level="INFO">Typing text '19032001stR+' into text field 'id:registerForm:confirmPassword'.</msg>
+<status status="PASS" starttime="20220425 15:03:36.221" endtime="20220425 15:03:36.350"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:registerForm:email</arg>
+<arg>${random_email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220425 15:03:36.351" level="INFO">Typing text 'lrUOAiG@gmail.com' into text field 'id:registerForm:email'.</msg>
+<status status="PASS" starttime="20220425 15:03:36.351" endtime="20220425 15:03:36.439"/>
+</kw>
+<kw name="sleep 50">
+<msg timestamp="20220425 15:03:36.442" level="FAIL">No keyword with name 'sleep 50' found. Did you mean:
+    BuiltIn.Sleep</msg>
+<status status="FAIL" starttime="20220425 15:03:36.442" endtime="20220425 15:03:36.442"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath://input[@name='registerForm:j_idt26']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220425 15:03:36.443" endtime="20220425 15:03:36.443"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>An email should have been sent to your address. It contains easy instructions to complete your registration</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" starttime="20220425 15:03:36.443" endtime="20220425 15:03:36.443"/>
+</kw>
+<status status="FAIL" starttime="20220425 15:03:34.396" endtime="20220425 15:03:36.444">No keyword with name 'sleep 50' found. Did you mean:
+    BuiltIn.Sleep</status>
+</test>
+<status status="FAIL" starttime="20220425 15:03:34.268" endtime="20220425 15:03:36.444"/>
+</suite>
+<status status="FAIL" starttime="20220425 15:03:34.267" endtime="20220425 15:03:36.445"/>
+</suite>
+<status status="FAIL" starttime="20220425 15:03:34.249" endtime="20220425 15:03:36.446"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Tretyakov Sergey Final Practice">Tretyakov Sergey Final Practice</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Test Cases">Tretyakov Sergey Final Practice.Test Cases</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Test Cases">Tretyakov Sergey Final Practice.Test Cases.Test Cases</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
