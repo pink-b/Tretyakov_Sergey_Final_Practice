@@ -146,12 +146,12 @@ Test Case 16.2
 
 Test Case 16.3
   [Setup]  Log In System And Open Inventory Menu
-  #[Teardown]  close browser
+  [Teardown]  close browser
   Check Object Type  Building
 
 Test Case 16.4
   [Setup]  Log In System And Open Inventory Menu
-  #[Teardown]  close browser
+  [Teardown]  close browser
   Check Object Type  Floor
 
 Test Case 16.5
@@ -181,7 +181,7 @@ Test Case 16.9
 
 Test Case 16.10
   [Setup]  Log In System And Open Inventory Menu
-  #[Teardown]  close browser
+  [Teardown]  close browser
   Check Object Type  Device
 
 
@@ -283,15 +283,14 @@ Test Case 18.9
 
 Test Case 18.10
   [Setup]  Log In System And Open Inventory Menu
-  [Teardown]  close browser
+  #[Teardown]  close browser
   Check Create Object And Edit  Device
 
 Test Case 19.1
   [Setup]  Log In System And Open Inventory Menu
-  #[Teardown]  close browser
+  [Teardown]  close browser
   Check Search Box
-For Me
-  Log In System
+
 
 
 

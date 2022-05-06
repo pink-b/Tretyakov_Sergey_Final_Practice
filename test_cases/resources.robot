@@ -11,30 +11,6 @@ Log in system
   input text  xpath://input[@name='j_username']  Ssergexxt1554
   input text  xpath://input[@name='j_password']  19032001stR+
   click button  xpath://input[@name='submit']
-  #input text  id:registerForm:username  ${random_username}
-  #input text  id:registerForm:password  19032001stR+
-  #input text  id:registerForm:confirmPassword  19032001stR+
-  #input text  id:registerForm:email  ${random_email}
-  #${username_text}=  get value  id:registerForm:username
-  #${password_text}=  get value  id:registerForm:password
-  #${title}=  get title
-  #log  ${title}
-  #log  ${username_text}
-  #click button  xpath://input[@name='registerForm:j_idt26']
-  #wait until element is enabled  xpath://input[@name='j_username']
-  #sleep  50
-#Registration Form Test Cases
- # [Arguments]  ${random_username} ${random_email}
-  #[Arguments]
-  #open browser  https://inventory.edu-netcracker.com/pages/registration.xhtml  chrome
-  #input text  id:registerForm:username  ${random_username}
-  #input text  id:registerForm:password  19032001stR+
-  #input text  id:registerForm:confirmPassword  19032001stR+
-  #input text  id:registerForm:email  ${random_email}
-  #click button  xpath://input[@name='registerForm:j_idt26']
-  #Sleep  5
-  #page should contain  An email should have been sent to your address. It contains easy instructions to complete your registration
-  #close browser
 Log In System And Open Inventory Menu
   open browser  https://inventory.edu-netcracker.com/login.jsp?justRegistered=true  chrome
   maximize browser window
@@ -56,7 +32,7 @@ Go to object
        Click To Save Button
        IF    "${value_list}[${index}]"=="Rack"
          ${index2}=  Get Index From List  ${value_list}  ${object}
-         #${ind}=  Evaluate  int(${index2})+int(${one})
+
          ${g}=  Catenate  xpath://a[contains(text(), '${value_list2}[${index2}]')]
          wait until element is enabled  ${g}
          click element  ${g}
@@ -137,17 +113,9 @@ Check Search Box
   ${text2}=  get_part_of_string  ${text}  end
   input text  id:search_form:name  ${text2}
   click element  xpath://select[@name='search_form:j_idt69']
-  click element  xpath://option[text()='end with']
+  click element  xpath://option[text()='end with']\
   Check Response Data  ${text2}  end
-  #click element  xpath://select[@name='search_form:j_idt69']
-  #click element  xpath://option[text()='start with']
-  #Check Response Data
-  #click element  xpath://select[@name='search_form:j_idt69']
-  #click element  xpath://option[text()='contains']
-  #Check Response Data
-  #click element  xpath://select[@name='search_form:j_idt69']
-  #click element  xpath://option[text()='end with']
-  #Check Response Data
+
 
 Check main page elements
   #Main pop ups
@@ -187,14 +155,22 @@ Check That Password Is Hidden
 
 Work with navigation tree
   #Select Window    NEW
-  Switch Window  locator=NEW
+  ${handles}=    Get Window Handles
+  log  ${handles}
+  Switch Window    ${handles}[1]
+  #Switch Window  title:Navigation Tree
+
   #This will take you to the latest window launched.
   wait until page contains element  xpath://title[text()='Navigation Tree']  50
   wait until element is visible  xpath:(//span[@class='ui-treenode-label ui-corner-all'])[1]//a[contains(text(), 'Country: ')]  50
   click element  xpath:(//span[@class='ui-treenode-label ui-corner-all'])[1]//a[contains(text(), 'Country: ')]
+
   click element  xpath://button[@id='OK']
+
   #Select Window    MAIN
-  Switch Window  locator=MAIN
+  #Switch Window  locator=MAIN
+  Switch Window    ${handles}[0]
+
   wait until page contains element  xpath://a[contains(text(), 'Software Logo')]  50
 
 Fill Registration Form
@@ -350,13 +326,13 @@ Click to save button
 Check response data
   [Arguments]  ${text}  ${type}
   click button  xpath://input[@name='search_form:j_idt77']
-  #${c}=  get text  xpath://*[@id="j_idt80_data"]//td[1]
+
   ${no_result_text}=  get text  xpath://*[@id="j_idt80_data"]//td[1]
   IF  "${no_result_text}"=="No records found."
     Fail  No results for created object
   ELSE
     ${count_results}=  Get Element Count  xpath://*[@id="j_idt80_data"]//td[1]
-    #${count_results}=  Evaluate  ${count_results} + 1
+
     WHILE  ${one} != ${count_results}
       ${xpath_request}=  Catenate  xpath:(//*[@id="j_idt80_data"]//td[1])[${one}]
       ${text_result}=  get text  ${xpath_request}
@@ -376,7 +352,7 @@ Check response data
       END
       IF  "${type}"=="contains"
         ${bool_value}=  result_contains  ${text_result}  ${text}
-        #${text_result}=  get_part_of_string  ${text_result}  contains
+
         log  ${one}
         log  ${text}
         log  ${text_result}
@@ -391,7 +367,7 @@ Check response data
       END
       IF  "${type}"=="start"
         ${bool_value}=  result_contains  ${text_result}  ${text}
-        #${text_result}=  get_part_of_string  ${text_result}  start
+
         log  ${one}
         log  ${text}
         log  ${text_result}
@@ -406,7 +382,7 @@ Check response data
       END
       IF  "${type}"=="end"
         ${bool_value}=  result_contains  ${text_result}  ${text}
-        #${text_result}=  get_part_of_string  ${text_result}  end
+
         log  ${one}
         log  ${text}
         log  ${text_result}
