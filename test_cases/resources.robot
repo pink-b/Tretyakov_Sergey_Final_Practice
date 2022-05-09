@@ -398,10 +398,10 @@ Check response data
     END
   END
 
+Click on information button
+  click element  xpath://label[@title='Login must contain only alphanumeric characters and contain at least 6 characters']
 
 
-
-
-
-
-
+Create test cases screenshot
+  Set Screenshot Directory  ./test_cases/screenshots
+  Capture Page Screenshot
