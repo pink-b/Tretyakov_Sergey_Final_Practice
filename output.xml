@@ -1,57 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0 (Python 3.6.9 on linux)" generated="20220509 11:45:48.187" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0 (Python 3.6.9 on linux)" generated="20220510 14:26:40.610" rpa="false" schemaversion="3">
 <suite id="s1" name="Tretyakov Sergey Final Practice" source="/home/sergey/Документы/GitHub/Tretyakov_Sergey_Final_Practice">
 <suite id="s1-s1" name="Test Cases" source="/home/sergey/Документы/GitHub/Tretyakov_Sergey_Final_Practice/test_cases">
 <suite id="s1-s1-s1" name="Test Cases" source="/home/sergey/Документы/GitHub/Tretyakov_Sergey_Final_Practice/test_cases/test_cases.robot">
-<test id="s1-s1-s1-t1" name="Test Case 19.1" line="343">
+<test id="s1-s1-s1-t1" name="Test Case 17.10" line="276">
 <kw name="Log In System And Open Inventory Menu" library="resources" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>https://inventory.edu-netcracker.com/login.jsp?justRegistered=true</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220509 11:45:48.385" level="INFO">Opening browser 'chrome' to base url 'https://inventory.edu-netcracker.com/login.jsp?justRegistered=true'.</msg>
-<status status="PASS" starttime="20220509 11:45:48.385" endtime="20220509 11:45:49.968"/>
+<msg timestamp="20220510 14:26:40.834" level="INFO">Opening browser 'chrome' to base url 'https://inventory.edu-netcracker.com/login.jsp?justRegistered=true'.</msg>
+<status status="PASS" starttime="20220510 14:26:40.834" endtime="20220510 14:26:42.503"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220509 11:45:49.968" endtime="20220509 11:45:50.072"/>
+<status status="PASS" starttime="20220510 14:26:42.503" endtime="20220510 14:26:42.615"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>xpath://input[@name='j_username']</arg>
 <arg>Ssergexxt1554</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220509 11:45:50.074" level="INFO">Typing text 'Ssergexxt1554' into text field 'xpath://input[@name='j_username']'.</msg>
-<status status="PASS" starttime="20220509 11:45:50.072" endtime="20220509 11:45:50.158"/>
+<msg timestamp="20220510 14:26:42.617" level="INFO">Typing text 'Ssergexxt1554' into text field 'xpath://input[@name='j_username']'.</msg>
+<status status="PASS" starttime="20220510 14:26:42.615" endtime="20220510 14:26:42.709"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>xpath://input[@name='j_password']</arg>
 <arg>19032001stR+</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220509 11:45:50.158" level="INFO">Typing text '19032001stR+' into text field 'xpath://input[@name='j_password']'.</msg>
-<status status="PASS" starttime="20220509 11:45:50.158" endtime="20220509 11:45:50.254"/>
+<msg timestamp="20220510 14:26:42.710" level="INFO">Typing text '19032001stR+' into text field 'xpath://input[@name='j_password']'.</msg>
+<status status="PASS" starttime="20220510 14:26:42.709" endtime="20220510 14:26:42.817"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>xpath://input[@name='submit']</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220509 11:45:50.255" level="INFO">Clicking button 'xpath://input[@name='submit']'.</msg>
-<status status="PASS" starttime="20220509 11:45:50.254" endtime="20220509 11:45:50.672"/>
+<msg timestamp="20220510 14:26:42.818" level="INFO">Clicking button 'xpath://input[@name='submit']'.</msg>
+<status status="PASS" starttime="20220510 14:26:42.818" endtime="20220510 14:26:43.252"/>
 </kw>
 <kw name="Wait Until Location Is" library="SeleniumLibrary">
 <arg>https://inventory.edu-netcracker.com/pages/startpage.xhtml</arg>
 <doc>Waits until the current URL is ``expected``.</doc>
-<status status="PASS" starttime="20220509 11:45:50.672" endtime="20220509 11:45:50.680"/>
+<status status="PASS" starttime="20220510 14:26:43.252" endtime="20220510 14:26:43.257"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>//div[@id='inventory']/a[contains(text(),'Inventory')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220509 11:45:50.680" level="INFO">Clicking element '//div[@id='inventory']/a[contains(text(),'Inventory')]'.</msg>
-<status status="PASS" starttime="20220509 11:45:50.680" endtime="20220509 11:45:51.234"/>
+<msg timestamp="20220510 14:26:43.258" level="INFO">Clicking element '//div[@id='inventory']/a[contains(text(),'Inventory')]'.</msg>
+<status status="PASS" starttime="20220510 14:26:43.258" endtime="20220510 14:26:43.980"/>
 </kw>
-<status status="PASS" starttime="20220509 11:45:48.384" endtime="20220509 11:45:51.234"/>
+<status status="PASS" starttime="20220510 14:26:40.833" endtime="20220510 14:26:43.981"/>
 </kw>
-<kw name="Check Search Box" library="resources">
+<kw name="Check object attributes" library="resources">
+<arg>Device</arg>
 <kw name="Go to object" library="resources">
-<arg>Country</arg>
+<arg>${object}</arg>
 <for flavor="IN RANGE">
 <var>${index}</var>
 <value>${value_list_length}</value>
@@ -60,11 +61,24 @@
 <kw name="Log" library="BuiltIn">
 <arg>${value_list}[${index}]</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220509 11:45:51.237" level="INFO">Country</msg>
-<status status="PASS" starttime="20220509 11:45:51.236" endtime="20220509 11:45:51.237"/>
+<msg timestamp="20220510 14:26:43.983" level="INFO">Country</msg>
+<status status="PASS" starttime="20220510 14:26:43.983" endtime="20220510 14:26:43.983"/>
 </kw>
 <if>
 <branch type="IF" condition="&quot;${value_list}[${index}]&quot;==&quot;${object}&quot;">
+<kw name="Fill Create Object Form" library="resources">
+<arg>${value_list}[${index}]</arg>
+<status status="NOT RUN" starttime="20220510 14:26:43.984" endtime="20220510 14:26:43.984"/>
+</kw>
+<kw name="Click to save button" library="resources">
+<status status="NOT RUN" starttime="20220510 14:26:43.984" endtime="20220510 14:26:43.984"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20220510 14:26:43.984" endtime="20220510 14:26:43.984"/>
+</break>
+<status status="NOT RUN" starttime="20220510 14:26:43.983" endtime="20220510 14:26:43.984"/>
+</branch>
+<branch type="ELSE">
 <kw name="Fill Create Object Form" library="resources">
 <arg>${value_list}[${index}]</arg>
 <if>
@@ -73,436 +87,437 @@
 <kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
 <arg>xpath://a[contains(text(), 'Create')]</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20220509 11:45:51.240" endtime="20220509 11:45:51.271"/>
+<status status="PASS" starttime="20220510 14:26:43.986" endtime="20220510 14:26:44.035"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>xpath://a[contains(text(), 'Create')]</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220509 11:45:51.271" endtime="20220509 11:45:51.294"/>
+<status status="PASS" starttime="20220510 14:26:44.035" endtime="20220510 14:26:44.060"/>
 </kw>
 <kw name="Scroll Element Into View" library="SeleniumLibrary">
 <arg>xpath://a[contains(text(), 'Create')]</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20220509 11:45:51.294" endtime="20220509 11:45:51.562"/>
+<status status="PASS" starttime="20220510 14:26:44.060" endtime="20220510 14:26:44.333"/>
 </kw>
 <kw name="Click Link" library="SeleniumLibrary">
 <arg>xpath://a[contains(text(), 'Create')]</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20220509 11:45:51.563" level="INFO">Clicking link 'xpath://a[contains(text(), 'Create')]'.</msg>
-<status status="PASS" starttime="20220509 11:45:51.562" endtime="20220509 11:45:51.736"/>
+<msg timestamp="20220510 14:26:44.333" level="INFO">Clicking link 'xpath://a[contains(text(), 'Create')]'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220510 14:26:44.347" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=96.0.4664.45)
+</msg>
+<status status="FAIL" starttime="20220510 14:26:44.341" endtime="20220510 14:26:44.351"/>
+</kw>
+<msg timestamp="20220510 14:26:44.351" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: chrome not reachable
+  (Session info: chrome=96.0.4664.45)
+</msg>
+<msg timestamp="20220510 14:26:44.352" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=96.0.4664.45)
+</msg>
+<status status="FAIL" starttime="20220510 14:26:44.333" endtime="20220510 14:26:44.352"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>//a[text()='Software Logo']</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220509 11:45:51.736" endtime="20220509 11:45:51.769"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.353" endtime="20220510 14:26:44.354"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
 <arg>//a[text()='Software Logo']</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20220509 11:45:51.769" endtime="20220509 11:45:51.789"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.354" endtime="20220510 14:26:44.354"/>
 </kw>
-<status status="PASS" starttime="20220509 11:45:51.240" endtime="20220509 11:45:51.789"/>
+<status status="FAIL" starttime="20220510 14:26:43.985" endtime="20220510 14:26:44.356"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:j_idt74:name</arg>
 <arg>${random_country}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220509 11:45:51.790" level="INFO">Typing text 'Chad8260' into text field 'id:j_idt74:name'.</msg>
-<status status="PASS" starttime="20220509 11:45:51.789" endtime="20220509 11:45:51.874"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.356" endtime="20220510 14:26:44.356"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:j_idt74:language</arg>
 <arg>${random_language}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220509 11:45:51.875" level="INFO">Typing text 'Chad8260language' into text field 'id:j_idt74:language'.</msg>
-<status status="PASS" starttime="20220509 11:45:51.874" endtime="20220509 11:45:51.970"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.356" endtime="20220510 14:26:44.357"/>
 </kw>
-<status status="PASS" starttime="20220509 11:45:51.239" endtime="20220509 11:45:51.970"/>
+<status status="FAIL" starttime="20220510 14:26:43.985" endtime="20220510 14:26:44.357"/>
 </branch>
-<status status="PASS" starttime="20220509 11:45:51.239" endtime="20220509 11:45:51.970"/>
+<status status="FAIL" starttime="20220510 14:26:43.985" endtime="20220510 14:26:44.357"/>
 </if>
 <if>
 <branch type="IF" condition="&quot;${object_type}&quot;==&quot;City&quot;">
 <kw name="Click on create button" library="resources">
-<status status="NOT RUN" starttime="20220509 11:45:51.971" endtime="20220509 11:45:51.971"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.357" endtime="20220510 14:26:44.357"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:j_idt74:name</arg>
 <arg>${random_city}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.971" endtime="20220509 11:45:51.971"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.357" endtime="20220510 14:26:44.358"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:j_idt74:population</arg>
 <arg>${random_population}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.971" endtime="20220509 11:45:51.971"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.358" endtime="20220510 14:26:44.358"/>
 </kw>
-<status status="NOT RUN" starttime="20220509 11:45:51.971" endtime="20220509 11:45:51.971"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.357" endtime="20220510 14:26:44.358"/>
 </branch>
-<status status="PASS" starttime="20220509 11:45:51.970" endtime="20220509 11:45:51.972"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.357" endtime="20220510 14:26:44.358"/>
 </if>
 <if>
 <branch type="IF" condition="&quot;${object_type}&quot;==&quot;Building&quot;">
 <kw name="Click on create button" library="resources">
-<status status="NOT RUN" starttime="20220509 11:45:51.972" endtime="20220509 11:45:51.972"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.358" endtime="20220510 14:26:44.358"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:j_idt74:name</arg>
 <arg>${random_building_name}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.972" endtime="20220509 11:45:51.972"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.358" endtime="20220510 14:26:44.358"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:j_idt74:streetName</arg>
 <arg>${random_street}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.972" endtime="20220509 11:45:51.972"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.358" endtime="20220510 14:26:44.358"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:j_idt74:number</arg>
 <arg>${random_number}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.973" endtime="20220509 11:45:51.973"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.358" endtime="20220510 14:26:44.358"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:j_idt74:square</arg>
 <arg>${random_square}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.973" endtime="20220509 11:45:51.973"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.358" endtime="20220510 14:26:44.359"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>id:j_idt74:isconnected</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.973" endtime="20220509 11:45:51.973"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.359" endtime="20220510 14:26:44.359"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
 <arg>xpath://*[text()='Lit']</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.973" endtime="20220509 11:45:51.973"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.359" endtime="20220510 14:26:44.359"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath://*[text()='Lit']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.973" endtime="20220509 11:45:51.973"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.359" endtime="20220510 14:26:44.359"/>
 </kw>
-<status status="NOT RUN" starttime="20220509 11:45:51.972" endtime="20220509 11:45:51.973"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.358" endtime="20220510 14:26:44.359"/>
 </branch>
-<status status="PASS" starttime="20220509 11:45:51.972" endtime="20220509 11:45:51.974"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.358" endtime="20220510 14:26:44.359"/>
 </if>
 <if>
 <branch type="IF" condition="&quot;${object_type}&quot;==&quot;Floor&quot;">
 <kw name="Click on create button" library="resources">
-<status status="NOT RUN" starttime="20220509 11:45:51.974" endtime="20220509 11:45:51.974"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.359" endtime="20220510 14:26:44.359"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>xpath://input[@id='j_idt74:number']</arg>
 <arg>${random_number}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.974" endtime="20220509 11:45:51.974"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.359" endtime="20220510 14:26:44.360"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:j_idt74:square</arg>
 <arg>${random_square}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.974" endtime="20220509 11:45:51.974"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.360" endtime="20220510 14:26:44.360"/>
 </kw>
-<status status="NOT RUN" starttime="20220509 11:45:51.974" endtime="20220509 11:45:51.974"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.359" endtime="20220510 14:26:44.360"/>
 </branch>
-<status status="PASS" starttime="20220509 11:45:51.974" endtime="20220509 11:45:51.975"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.359" endtime="20220510 14:26:44.360"/>
 </if>
 <if>
 <branch type="IF" condition="&quot;${object_type}&quot;==&quot;Room&quot;">
 <kw name="Click on create button" library="resources">
-<status status="NOT RUN" starttime="20220509 11:45:51.975" endtime="20220509 11:45:51.975"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.360" endtime="20220510 14:26:44.360"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:j_idt74:name</arg>
 <arg>${random_number}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.975" endtime="20220509 11:45:51.975"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.360" endtime="20220510 14:26:44.360"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:j_idt74:square</arg>
 <arg>${random_square}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.975" endtime="20220509 11:45:51.975"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.360" endtime="20220510 14:26:44.360"/>
 </kw>
-<status status="NOT RUN" starttime="20220509 11:45:51.975" endtime="20220509 11:45:51.975"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.360" endtime="20220510 14:26:44.360"/>
 </branch>
-<status status="PASS" starttime="20220509 11:45:51.975" endtime="20220509 11:45:51.975"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.360" endtime="20220510 14:26:44.360"/>
 </if>
 <if>
 <branch type="IF" condition="&quot;${object_type}&quot;==&quot;Rack&quot;">
 <kw name="Click on create button" library="resources">
-<status status="NOT RUN" starttime="20220509 11:45:51.976" endtime="20220509 11:45:51.976"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.361" endtime="20220510 14:26:44.361"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:j_idt74:name</arg>
 <arg>${random_room}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.976" endtime="20220509 11:45:51.976"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.361" endtime="20220510 14:26:44.361"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:j_idt74:width</arg>
 <arg>${random_width}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.976" endtime="20220509 11:45:51.976"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.361" endtime="20220510 14:26:44.361"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:j_idt74:length</arg>
 <arg>${random_length}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.976" endtime="20220509 11:45:51.976"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.361" endtime="20220510 14:26:44.361"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:j_idt74:height</arg>
 <arg>${height}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.976" endtime="20220509 11:45:51.976"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.361" endtime="20220510 14:26:44.361"/>
 </kw>
-<status status="NOT RUN" starttime="20220509 11:45:51.976" endtime="20220509 11:45:51.976"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.360" endtime="20220510 14:26:44.361"/>
 </branch>
-<status status="PASS" starttime="20220509 11:45:51.976" endtime="20220509 11:45:51.976"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.360" endtime="20220510 14:26:44.361"/>
 </if>
 <if>
 <branch type="IF" condition="&quot;${object_type}&quot;==&quot;Device&quot;">
 <kw name="Click on create button" library="resources">
-<status status="NOT RUN" starttime="20220509 11:45:51.977" endtime="20220509 11:45:51.977"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.362" endtime="20220510 14:26:44.362"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:j_idt74:name</arg>
 <arg>${random_smart_phone_name}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.977" endtime="20220509 11:45:51.977"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.362" endtime="20220510 14:26:44.362"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
 <arg>id:j_idt74:macAddress</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.977" endtime="20220509 11:45:51.977"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.362" endtime="20220510 14:26:44.362"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:j_idt74:macAddress</arg>
 <arg>${random_mac_address}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.977" endtime="20220509 11:45:51.977"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.362" endtime="20220510 14:26:44.362"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:j_idt74:ram</arg>
 <arg>${ram}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.977" endtime="20220509 11:45:51.977"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.362" endtime="20220510 14:26:44.362"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:j_idt74:cpu</arg>
 <arg>${cpu}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.977" endtime="20220509 11:45:51.977"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.362" endtime="20220510 14:26:44.362"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:j_idt74:ipAddress</arg>
 <arg>${random_ip_address}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.977" endtime="20220509 11:45:51.977"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.363" endtime="20220510 14:26:44.363"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:j_idt74:width</arg>
 <arg>${random_width}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.978" endtime="20220509 11:45:51.978"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.363" endtime="20220510 14:26:44.363"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:j_idt74:length</arg>
 <arg>${random_length}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.978" endtime="20220509 11:45:51.978"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.363" endtime="20220510 14:26:44.363"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:j_idt74:height</arg>
 <arg>${random_heigth}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.978" endtime="20220509 11:45:51.978"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.363" endtime="20220510 14:26:44.363"/>
 </kw>
 <kw name="Click Link" library="SeleniumLibrary">
 <arg>xpath://input[@id='j_idt74:locatedInOtName']/following::a[1]</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.978" endtime="20220509 11:45:51.978"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.363" endtime="20220510 14:26:44.363"/>
 </kw>
 <kw name="Work with navigation tree" library="resources">
-<status status="NOT RUN" starttime="20220509 11:45:51.978" endtime="20220509 11:45:51.978"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.363" endtime="20220510 14:26:44.363"/>
 </kw>
 <kw name="Click Link" library="SeleniumLibrary">
-<arg>xpath://input[@id='j_idt74:locatedInOtName']/following::a[2]</arg>
+<arg>xpath://input[@id='j_idt74:locatedInOtName']/following::a[3]</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.978" endtime="20220509 11:45:51.978"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.363" endtime="20220510 14:26:44.363"/>
 </kw>
 <kw name="Work with navigation tree" library="resources">
-<status status="NOT RUN" starttime="20220509 11:45:51.978" endtime="20220509 11:45:51.978"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.364" endtime="20220510 14:26:44.364"/>
 </kw>
-<status status="NOT RUN" starttime="20220509 11:45:51.977" endtime="20220509 11:45:51.978"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.361" endtime="20220510 14:26:44.364"/>
 </branch>
-<status status="PASS" starttime="20220509 11:45:51.976" endtime="20220509 11:45:51.978"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.361" endtime="20220510 14:26:44.364"/>
 </if>
 <if>
 <branch type="IF" condition="&quot;${object_type}&quot;==&quot;Post terminal&quot;">
 <kw name="Click on create button" library="resources">
-<status status="NOT RUN" starttime="20220509 11:45:51.979" endtime="20220509 11:45:51.979"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.364" endtime="20220510 14:26:44.364"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:j_idt74:name</arg>
 <arg>${random_terminal_name}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.979" endtime="20220509 11:45:51.979"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.364" endtime="20220510 14:26:44.364"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:j_idt74:width</arg>
 <arg>${random_width}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.979" endtime="20220509 11:45:51.979"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.364" endtime="20220510 14:26:44.364"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:j_idt74:length</arg>
 <arg>${random_length}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.979" endtime="20220509 11:45:51.979"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.364" endtime="20220510 14:26:44.364"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:j_idt74:height</arg>
 <arg>${random_heigth}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.979" endtime="20220509 11:45:51.979"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.364" endtime="20220510 14:26:44.365"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>id:j_idt74:physicalStatus</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.979" endtime="20220509 11:45:51.979"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.365" endtime="20220510 14:26:44.365"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
 <arg>xpath://option[text()='Planned']</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.979" endtime="20220509 11:45:51.979"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.365" endtime="20220510 14:26:44.365"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath://option[text()='Planned']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.979" endtime="20220509 11:45:51.980"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.365" endtime="20220510 14:26:44.365"/>
 </kw>
 <kw name="Click Link" library="SeleniumLibrary">
 <arg>xpath://input[@id='j_idt74:locatedInOtName']/following::a[1]</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.980" endtime="20220509 11:45:51.980"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.365" endtime="20220510 14:26:44.365"/>
 </kw>
 <kw name="Work with navigation tree" library="resources">
-<status status="NOT RUN" starttime="20220509 11:45:51.980" endtime="20220509 11:45:51.980"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.365" endtime="20220510 14:26:44.365"/>
 </kw>
-<status status="NOT RUN" starttime="20220509 11:45:51.979" endtime="20220509 11:45:51.980"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.364" endtime="20220510 14:26:44.365"/>
 </branch>
-<status status="PASS" starttime="20220509 11:45:51.978" endtime="20220509 11:45:51.980"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.364" endtime="20220510 14:26:44.365"/>
 </if>
 <if>
 <branch type="IF" condition="&quot;${object_type}&quot;==&quot;Pay Box&quot;">
 <kw name="Click on create button" library="resources">
-<status status="NOT RUN" starttime="20220509 11:45:51.980" endtime="20220509 11:45:51.980"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.365" endtime="20220510 14:26:44.366"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:j_idt74:name</arg>
 <arg>${random_terminal_name}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.980" endtime="20220509 11:45:51.980"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.366" endtime="20220510 14:26:44.366"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:j_idt74:secureProtocol</arg>
 <arg>${random_secure_protocol}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.980" endtime="20220509 11:45:51.980"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.366" endtime="20220510 14:26:44.366"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:j_idt74:displaySize</arg>
 <arg>${display_size}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.980" endtime="20220509 11:45:51.980"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.366" endtime="20220510 14:26:44.366"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>id:j_idt74:physicalStatus</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.981" endtime="20220509 11:45:51.981"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.366" endtime="20220510 14:26:44.366"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
 <arg>//option[text()='Planned']</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.981" endtime="20220509 11:45:51.981"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.366" endtime="20220510 14:26:44.366"/>
 </kw>
 <kw name="Click Link" library="SeleniumLibrary">
 <arg>xpath://input[@id='j_idt74:locatedInOtName']/following::a[1]</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.981" endtime="20220509 11:45:51.981"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.366" endtime="20220510 14:26:44.366"/>
 </kw>
 <kw name="Work with navigation tree" library="resources">
-<status status="NOT RUN" starttime="20220509 11:45:51.981" endtime="20220509 11:45:51.981"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.366" endtime="20220510 14:26:44.366"/>
 </kw>
-<status status="NOT RUN" starttime="20220509 11:45:51.980" endtime="20220509 11:45:51.981"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.365" endtime="20220510 14:26:44.367"/>
 </branch>
-<status status="PASS" starttime="20220509 11:45:51.980" endtime="20220509 11:45:51.981"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.365" endtime="20220510 14:26:44.367"/>
 </if>
 <if>
 <branch type="IF" condition="&quot;${object_type}&quot;==&quot;ATM&quot;">
 <kw name="Click on create button" library="resources">
-<status status="NOT RUN" starttime="20220509 11:45:51.981" endtime="20220509 11:45:51.981"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.367" endtime="20220510 14:26:44.367"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:j_idt74:name</arg>
 <arg>${random_terminal_name}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.981" endtime="20220509 11:45:51.981"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.367" endtime="20220510 14:26:44.367"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:j_idt74:connectionType</arg>
 <arg>${connection_type}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.981" endtime="20220509 11:45:51.981"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.367" endtime="20220510 14:26:44.367"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:j_idt74:extraSecurity</arg>
 <arg>${extra_security}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.981" endtime="20220509 11:45:51.982"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.367" endtime="20220510 14:26:44.367"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>id:j_idt74:physicalStatus</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.982" endtime="20220509 11:45:51.982"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.367" endtime="20220510 14:26:44.367"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
 <arg>//option[text()='Planned']</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.982" endtime="20220509 11:45:51.982"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.368" endtime="20220510 14:26:44.368"/>
 </kw>
 <kw name="Click Link" library="SeleniumLibrary">
 <arg>xpath://input[@id='j_idt74:locatedInOtName']/following::a[1]</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.982" endtime="20220509 11:45:51.982"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.368" endtime="20220510 14:26:44.368"/>
 </kw>
 <kw name="Work with navigation tree" library="resources">
-<status status="NOT RUN" starttime="20220509 11:45:51.982" endtime="20220509 11:45:51.982"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.368" endtime="20220510 14:26:44.368"/>
 </kw>
-<status status="NOT RUN" starttime="20220509 11:45:51.981" endtime="20220509 11:45:51.982"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.367" endtime="20220510 14:26:44.368"/>
 </branch>
-<status status="PASS" starttime="20220509 11:45:51.981" endtime="20220509 11:45:51.982"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.367" endtime="20220510 14:26:44.368"/>
 </if>
-<status status="PASS" starttime="20220509 11:45:51.238" endtime="20220509 11:45:51.982"/>
-</kw>
-<break>
-<status status="PASS" starttime="20220509 11:45:51.982" endtime="20220509 11:45:51.982"/>
-</break>
-<status status="PASS" starttime="20220509 11:45:51.237" endtime="20220509 11:45:51.982"/>
-</branch>
-<branch type="ELSE">
-<kw name="Fill Create Object Form" library="resources">
-<arg>${value_list}[${index}]</arg>
-<status status="NOT RUN" starttime="20220509 11:45:51.982" endtime="20220509 11:45:51.983"/>
+<status status="FAIL" starttime="20220510 14:26:43.984" endtime="20220510 14:26:44.369"/>
 </kw>
 <kw name="Click to save button" library="resources">
-<status status="NOT RUN" starttime="20220509 11:45:51.983" endtime="20220509 11:45:51.983"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.369" endtime="20220510 14:26:44.369"/>
 </kw>
 <if>
 <branch type="IF" condition="&quot;${value_list}[${index}]&quot;==&quot;Rack&quot;">
@@ -511,1449 +526,143 @@
 <arg>${value_list}</arg>
 <arg>${object}</arg>
 <doc>Returns the index of the first occurrence of the ``value`` on the list.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.983" endtime="20220509 11:45:51.983"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.369" endtime="20220510 14:26:44.369"/>
 </kw>
 <kw name="Catenate" library="BuiltIn">
 <var>${g}</var>
 <arg>xpath://a[contains(text(), '${value_list2}[${index2}]')]</arg>
 <doc>Catenates the given items together and returns the resulted string.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.983" endtime="20220509 11:45:51.983"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.370" endtime="20220510 14:26:44.370"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
 <arg>${g}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.983" endtime="20220509 11:45:51.983"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.370" endtime="20220510 14:26:44.370"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${g}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.983" endtime="20220509 11:45:51.983"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.370" endtime="20220510 14:26:44.370"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>${index2}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.983" endtime="20220509 11:45:51.983"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.370" endtime="20220510 14:26:44.370"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>${object}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.983" endtime="20220509 11:45:51.983"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.370" endtime="20220510 14:26:44.370"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>${value_list}[${index2}]</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.983" endtime="20220509 11:45:51.983"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.370" endtime="20220510 14:26:44.370"/>
 </kw>
 <kw name="Fill Create Object Form" library="resources">
 <arg>${value_list}[${index2}]</arg>
-<status status="NOT RUN" starttime="20220509 11:45:51.984" endtime="20220509 11:45:51.984"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.370" endtime="20220510 14:26:44.370"/>
+</kw>
+<kw name="Click to save button" library="resources">
+<status status="NOT RUN" starttime="20220510 14:26:44.371" endtime="20220510 14:26:44.371"/>
 </kw>
 <break>
-<status status="NOT RUN" starttime="20220509 11:45:51.984" endtime="20220509 11:45:51.984"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.371" endtime="20220510 14:26:44.371"/>
 </break>
-<status status="NOT RUN" starttime="20220509 11:45:51.983" endtime="20220509 11:45:51.984"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.369" endtime="20220510 14:26:44.371"/>
 </branch>
-<status status="NOT RUN" starttime="20220509 11:45:51.983" endtime="20220509 11:45:51.984"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.369" endtime="20220510 14:26:44.371"/>
 </if>
 <kw name="Evaluate" library="BuiltIn">
 <var>${ind}</var>
 <arg>int(${index})+int(${one})</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.984" endtime="20220509 11:45:51.984"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.371" endtime="20220510 14:26:44.371"/>
 </kw>
 <kw name="Catenate" library="BuiltIn">
 <var>${g}</var>
 <arg>xpath://a[contains(text(), '${value_list2}[${ind}]')]</arg>
 <doc>Catenates the given items together and returns the resulted string.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.984" endtime="20220509 11:45:51.984"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.371" endtime="20220510 14:26:44.371"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
 <arg>${g}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.984" endtime="20220509 11:45:51.984"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.371" endtime="20220510 14:26:44.371"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${g}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:51.984" endtime="20220509 11:45:51.984"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.371" endtime="20220510 14:26:44.371"/>
 </kw>
-<status status="NOT RUN" starttime="20220509 11:45:51.982" endtime="20220509 11:45:51.984"/>
+<status status="FAIL" starttime="20220510 14:26:43.984" endtime="20220510 14:26:44.371"/>
 </branch>
-<status status="PASS" starttime="20220509 11:45:51.237" endtime="20220509 11:45:51.984"/>
+<status status="FAIL" starttime="20220510 14:26:43.983" endtime="20220510 14:26:44.371"/>
 </if>
-<status status="PASS" starttime="20220509 11:45:51.236" endtime="20220509 11:45:51.984"/>
+<status status="FAIL" starttime="20220510 14:26:43.982" endtime="20220510 14:26:44.372"/>
 </iter>
-<status status="PASS" starttime="20220509 11:45:51.236" endtime="20220509 11:45:51.984"/>
+<status status="FAIL" starttime="20220510 14:26:43.982" endtime="20220510 14:26:44.372"/>
 </for>
-<status status="PASS" starttime="20220509 11:45:51.235" endtime="20220509 11:45:51.984"/>
+<status status="FAIL" starttime="20220510 14:26:43.982" endtime="20220510 14:26:44.373"/>
 </kw>
-<kw name="Click to save button" library="resources">
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>name:j_idt74:j_idt76</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220509 11:45:51.985" level="INFO">Clicking button 'name:j_idt74:j_idt76'.</msg>
-<status status="PASS" starttime="20220509 11:45:51.985" endtime="20220509 11:45:52.289"/>
+<kw name="Get attributes of object" library="resources">
+<status status="NOT RUN" starttime="20220510 14:26:44.373" endtime="20220510 14:26:44.373"/>
 </kw>
-<status status="PASS" starttime="20220509 11:45:51.985" endtime="20220509 11:45:52.289"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>//div[@id='table_data']//*[contains(text(), 'Name')]/following-sibling::*[@class='parameter']</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220509 11:45:52.320" level="INFO">${text} = Chad8260</msg>
-<status status="PASS" starttime="20220509 11:45:52.289" endtime="20220509 11:45:52.320"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220509 11:45:52.320" level="INFO">Chad8260</msg>
-<status status="PASS" starttime="20220509 11:45:52.320" endtime="20220509 11:45:52.321"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id:search-text-input</arg>
-<arg>${text}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220509 11:45:52.321" level="INFO">Typing text 'Chad8260' into text field 'id:search-text-input'.</msg>
-<status status="PASS" starttime="20220509 11:45:52.321" endtime="20220509 11:45:52.405"/>
-</kw>
-<kw name="Press Keys" library="SeleniumLibrary">
-<arg>id:search-text-input</arg>
-<arg>ENTER</arg>
-<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20220509 11:45:52.406" level="INFO">Sending key(s) ('ENTER',) to id:search-text-input element.</msg>
-<msg timestamp="20220509 11:45:52.684" level="INFO">Pressing special key ENTER to element.</msg>
-<msg timestamp="20220509 11:45:52.684" level="INFO">Releasing special key ENTER.</msg>
-<status status="PASS" starttime="20220509 11:45:52.405" endtime="20220509 11:45:52.874"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>xpath://select[@name='search_form:j_idt69']</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20220509 11:45:52.874" endtime="20220509 11:45:52.905"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath://select[@name='search_form:j_idt69']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220509 11:45:52.906" level="INFO">Clicking element 'xpath://select[@name='search_form:j_idt69']'.</msg>
-<status status="PASS" starttime="20220509 11:45:52.905" endtime="20220509 11:45:52.964"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath://option[text()='equal']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220509 11:45:52.965" level="INFO">Clicking element 'xpath://option[text()='equal']'.</msg>
-<status status="PASS" starttime="20220509 11:45:52.964" endtime="20220509 11:45:52.992"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id:search_form:name</arg>
-<arg>${text}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220509 11:45:52.993" level="INFO">Typing text 'Chad8260' into text field 'id:search_form:name'.</msg>
-<status status="PASS" starttime="20220509 11:45:52.993" endtime="20220509 11:45:53.087"/>
-</kw>
-<kw name="Check response data" library="resources">
-<arg>${text}</arg>
-<arg>equals</arg>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>xpath://input[@name='search_form:j_idt77']</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220509 11:45:53.088" level="INFO">Clicking button 'xpath://input[@name='search_form:j_idt77']'.</msg>
-<status status="PASS" starttime="20220509 11:45:53.087" endtime="20220509 11:45:53.289"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${no_result_text}</var>
-<arg>xpath://*[@id="j_idt80_data"]//td[1]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220509 11:45:53.319" level="INFO">${no_result_text} = Chad8260</msg>
-<status status="PASS" starttime="20220509 11:45:53.289" endtime="20220509 11:45:53.319"/>
-</kw>
-<if>
-<branch type="IF" condition="&quot;${no_result_text}&quot;==&quot;No records found.&quot;">
-<kw name="Fail" library="BuiltIn">
-<arg>No results for created object</arg>
-<doc>Fails the test with the given message and optionally alters its tags.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.319" endtime="20220509 11:45:53.319"/>
-</kw>
-<status status="NOT RUN" starttime="20220509 11:45:53.319" endtime="20220509 11:45:53.319"/>
-</branch>
-<branch type="ELSE">
-<kw name="Get Element Count" library="SeleniumLibrary">
-<var>${count_results}</var>
-<arg>xpath://*[@id="j_idt80_data"]//td[1]</arg>
-<doc>Returns the number of elements matching ``locator``.</doc>
-<msg timestamp="20220509 11:45:53.327" level="INFO">${count_results} = 1</msg>
-<status status="PASS" starttime="20220509 11:45:53.320" endtime="20220509 11:45:53.327"/>
-</kw>
-<while condition="${one} != ${count_results}">
-<iter>
-<kw name="Catenate" library="BuiltIn">
-<var>${xpath_request}</var>
-<arg>xpath:(//*[@id="j_idt80_data"]//td[1])[${one}]</arg>
-<doc>Catenates the given items together and returns the resulted string.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.328" endtime="20220509 11:45:53.328"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text_result}</var>
-<arg>${xpath_request}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.328" endtime="20220509 11:45:53.328"/>
-</kw>
-<if>
-<branch type="IF" condition="&quot;${type}&quot;==&quot;equals&quot;">
-<kw name="Log" library="BuiltIn">
-<arg>${one}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.329" endtime="20220509 11:45:53.329"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.329" endtime="20220509 11:45:53.329"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${text_result}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.329" endtime="20220509 11:45:53.329"/>
-</kw>
-<if>
-<branch type="IF" condition="&quot;${text}&quot;==&quot;${text_result}&quot;">
-<kw name="Evaluate" library="BuiltIn">
-<var>${one}</var>
-<arg>${one} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.329" endtime="20220509 11:45:53.329"/>
-</kw>
-<kw name="Continue For Loop" library="BuiltIn">
-<doc>Skips the current FOR loop iteration and continues from the next.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.329" endtime="20220509 11:45:53.329"/>
-</kw>
-<status status="NOT RUN" starttime="20220509 11:45:53.329" endtime="20220509 11:45:53.329"/>
-</branch>
-<branch type="ELSE">
-<kw name="Fail" library="BuiltIn">
-<arg>Search result does not match the equals requirement</arg>
-<doc>Fails the test with the given message and optionally alters its tags.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.329" endtime="20220509 11:45:53.329"/>
-</kw>
-<break>
-<status status="NOT RUN" starttime="20220509 11:45:53.329" endtime="20220509 11:45:53.329"/>
-</break>
-<status status="NOT RUN" starttime="20220509 11:45:53.329" endtime="20220509 11:45:53.329"/>
-</branch>
-<status status="NOT RUN" starttime="20220509 11:45:53.329" endtime="20220509 11:45:53.329"/>
-</if>
-<kw name="Pass Execution" library="BuiltIn">
-<arg>All results are equal to query</arg>
-<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.330" endtime="20220509 11:45:53.330"/>
-</kw>
-<status status="NOT RUN" starttime="20220509 11:45:53.328" endtime="20220509 11:45:53.330"/>
-</branch>
-<status status="NOT RUN" starttime="20220509 11:45:53.328" endtime="20220509 11:45:53.330"/>
-</if>
-<if>
-<branch type="IF" condition="&quot;${type}&quot;==&quot;contains&quot;">
-<kw name="Result Contains" library="variables">
+<kw name="Compare Lists" library="variables">
 <var>${bool_value}</var>
-<arg>${text_result}</arg>
-<arg>${text}</arg>
-<status status="NOT RUN" starttime="20220509 11:45:53.330" endtime="20220509 11:45:53.330"/>
+<arg>${object}</arg>
+<arg>${attributes}</arg>
+<status status="NOT RUN" starttime="20220510 14:26:44.374" endtime="20220510 14:26:44.374"/>
 </kw>
 <kw name="Log" library="BuiltIn">
-<arg>${one}</arg>
+<arg>${object}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.330" endtime="20220509 11:45:53.330"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.374" endtime="20220510 14:26:44.374"/>
 </kw>
 <kw name="Log" library="BuiltIn">
-<arg>${text}</arg>
+<arg>${attributes}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.330" endtime="20220509 11:45:53.330"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.374" endtime="20220510 14:26:44.374"/>
 </kw>
-<kw name="Log" library="BuiltIn">
-<arg>${text_result}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.330" endtime="20220509 11:45:53.330"/>
+<kw name="Should Be True" library="BuiltIn">
+<arg>${bool_value}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="NOT RUN" starttime="20220510 14:26:44.374" endtime="20220510 14:26:44.374"/>
 </kw>
-<if>
-<branch type="IF" condition="${bool_value}">
-<kw name="Evaluate" library="BuiltIn">
-<var>${one}</var>
-<arg>${one} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.330" endtime="20220509 11:45:53.330"/>
-</kw>
-<kw name="Continue For Loop" library="BuiltIn">
-<doc>Skips the current FOR loop iteration and continues from the next.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.331" endtime="20220509 11:45:53.331"/>
-</kw>
-<status status="NOT RUN" starttime="20220509 11:45:53.330" endtime="20220509 11:45:53.331"/>
-</branch>
-<branch type="ELSE">
-<kw name="Fail" library="BuiltIn">
-<arg>Search result does not match the equals requirement</arg>
-<doc>Fails the test with the given message and optionally alters its tags.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.331" endtime="20220509 11:45:53.331"/>
-</kw>
-<break>
-<status status="NOT RUN" starttime="20220509 11:45:53.331" endtime="20220509 11:45:53.331"/>
-</break>
-<status status="NOT RUN" starttime="20220509 11:45:53.331" endtime="20220509 11:45:53.331"/>
-</branch>
-<status status="NOT RUN" starttime="20220509 11:45:53.330" endtime="20220509 11:45:53.331"/>
-</if>
-<kw name="Pass Execution" library="BuiltIn">
-<arg>All results are equal to query</arg>
-<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.331" endtime="20220509 11:45:53.331"/>
-</kw>
-<status status="NOT RUN" starttime="20220509 11:45:53.330" endtime="20220509 11:45:53.331"/>
-</branch>
-<status status="NOT RUN" starttime="20220509 11:45:53.330" endtime="20220509 11:45:53.331"/>
-</if>
-<if>
-<branch type="IF" condition="&quot;${type}&quot;==&quot;start&quot;">
-<kw name="Result Contains" library="variables">
-<var>${bool_value}</var>
-<arg>${text_result}</arg>
-<arg>${text}</arg>
-<status status="NOT RUN" starttime="20220509 11:45:53.331" endtime="20220509 11:45:53.331"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${one}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.331" endtime="20220509 11:45:53.331"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.331" endtime="20220509 11:45:53.332"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${text_result}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.332" endtime="20220509 11:45:53.332"/>
-</kw>
-<if>
-<branch type="IF" condition="${bool_value}">
-<kw name="Evaluate" library="BuiltIn">
-<var>${one}</var>
-<arg>${one} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.332" endtime="20220509 11:45:53.332"/>
-</kw>
-<kw name="Continue For Loop" library="BuiltIn">
-<doc>Skips the current FOR loop iteration and continues from the next.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.332" endtime="20220509 11:45:53.332"/>
-</kw>
-<status status="NOT RUN" starttime="20220509 11:45:53.332" endtime="20220509 11:45:53.332"/>
-</branch>
-<branch type="ELSE">
-<kw name="Fail" library="BuiltIn">
-<arg>Search result does not match the equals requirement</arg>
-<doc>Fails the test with the given message and optionally alters its tags.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.332" endtime="20220509 11:45:53.332"/>
-</kw>
-<break>
-<status status="NOT RUN" starttime="20220509 11:45:53.332" endtime="20220509 11:45:53.332"/>
-</break>
-<status status="NOT RUN" starttime="20220509 11:45:53.332" endtime="20220509 11:45:53.332"/>
-</branch>
-<status status="NOT RUN" starttime="20220509 11:45:53.332" endtime="20220509 11:45:53.332"/>
-</if>
-<kw name="Pass Execution" library="BuiltIn">
-<arg>All results are equal to query</arg>
-<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.332" endtime="20220509 11:45:53.332"/>
-</kw>
-<status status="NOT RUN" starttime="20220509 11:45:53.331" endtime="20220509 11:45:53.332"/>
-</branch>
-<status status="NOT RUN" starttime="20220509 11:45:53.331" endtime="20220509 11:45:53.332"/>
-</if>
-<if>
-<branch type="IF" condition="&quot;${type}&quot;==&quot;end&quot;">
-<kw name="Result Contains" library="variables">
-<var>${bool_value}</var>
-<arg>${text_result}</arg>
-<arg>${text}</arg>
-<status status="NOT RUN" starttime="20220509 11:45:53.333" endtime="20220509 11:45:53.333"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${one}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.333" endtime="20220509 11:45:53.333"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.333" endtime="20220509 11:45:53.333"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${text_result}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.333" endtime="20220509 11:45:53.333"/>
-</kw>
-<if>
-<branch type="IF" condition="${bool_value}">
-<kw name="Evaluate" library="BuiltIn">
-<var>${one}</var>
-<arg>${one} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.333" endtime="20220509 11:45:53.333"/>
-</kw>
-<kw name="Continue For Loop" library="BuiltIn">
-<doc>Skips the current FOR loop iteration and continues from the next.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.333" endtime="20220509 11:45:53.333"/>
-</kw>
-<status status="NOT RUN" starttime="20220509 11:45:53.333" endtime="20220509 11:45:53.333"/>
-</branch>
-<branch type="ELSE">
-<kw name="Fail" library="BuiltIn">
-<arg>Search result does not match the equals requirement</arg>
-<doc>Fails the test with the given message and optionally alters its tags.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.333" endtime="20220509 11:45:53.334"/>
-</kw>
-<break>
-<status status="NOT RUN" starttime="20220509 11:45:53.334" endtime="20220509 11:45:53.334"/>
-</break>
-<status status="NOT RUN" starttime="20220509 11:45:53.333" endtime="20220509 11:45:53.334"/>
-</branch>
-<status status="NOT RUN" starttime="20220509 11:45:53.333" endtime="20220509 11:45:53.334"/>
-</if>
-<kw name="Pass Execution" library="BuiltIn">
-<arg>All results are equal to query</arg>
-<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.334" endtime="20220509 11:45:53.334"/>
-</kw>
-<status status="NOT RUN" starttime="20220509 11:45:53.332" endtime="20220509 11:45:53.334"/>
-</branch>
-<status status="NOT RUN" starttime="20220509 11:45:53.332" endtime="20220509 11:45:53.334"/>
-</if>
-<status status="NOT RUN" starttime="20220509 11:45:53.328" endtime="20220509 11:45:53.334"/>
-</iter>
-<status status="NOT RUN" starttime="20220509 11:45:53.328" endtime="20220509 11:45:53.334"/>
-</while>
-<status status="PASS" starttime="20220509 11:45:53.320" endtime="20220509 11:45:53.334"/>
-</branch>
-<status status="PASS" starttime="20220509 11:45:53.319" endtime="20220509 11:45:53.334"/>
-</if>
-<status status="PASS" starttime="20220509 11:45:53.087" endtime="20220509 11:45:53.334"/>
-</kw>
-<kw name="Clear Element Text" library="SeleniumLibrary">
-<arg>id:search_form:name</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" starttime="20220509 11:45:53.334" endtime="20220509 11:45:53.374"/>
-</kw>
-<kw name="Get Part Of String" library="variables">
-<var>${text2}</var>
-<arg>${text}</arg>
-<arg>contains</arg>
-<msg timestamp="20220509 11:45:53.375" level="INFO">8</msg>
-<msg timestamp="20220509 11:45:53.375" level="INFO">${text2} = Chad</msg>
-<status status="PASS" starttime="20220509 11:45:53.375" endtime="20220509 11:45:53.375"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id:search_form:name</arg>
-<arg>${text2}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220509 11:45:53.376" level="INFO">Typing text 'Chad' into text field 'id:search_form:name'.</msg>
-<status status="PASS" starttime="20220509 11:45:53.375" endtime="20220509 11:45:53.444"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath://select[@name='search_form:j_idt69']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220509 11:45:53.445" level="INFO">Clicking element 'xpath://select[@name='search_form:j_idt69']'.</msg>
-<status status="PASS" starttime="20220509 11:45:53.444" endtime="20220509 11:45:53.519"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath://option[text()='contains']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220509 11:45:53.519" level="INFO">Clicking element 'xpath://option[text()='contains']'.</msg>
-<status status="PASS" starttime="20220509 11:45:53.519" endtime="20220509 11:45:53.569"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220509 11:45:53.570" level="INFO">Chad8260</msg>
-<status status="PASS" starttime="20220509 11:45:53.569" endtime="20220509 11:45:53.570"/>
-</kw>
-<kw name="Check response data" library="resources">
-<arg>${text2}</arg>
-<arg>contains</arg>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>xpath://input[@name='search_form:j_idt77']</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220509 11:45:53.571" level="INFO">Clicking button 'xpath://input[@name='search_form:j_idt77']'.</msg>
-<status status="PASS" starttime="20220509 11:45:53.570" endtime="20220509 11:45:53.759"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${no_result_text}</var>
-<arg>xpath://*[@id="j_idt80_data"]//td[1]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220509 11:45:53.779" level="INFO">${no_result_text} = Chad318</msg>
-<status status="PASS" starttime="20220509 11:45:53.759" endtime="20220509 11:45:53.779"/>
-</kw>
-<if>
-<branch type="IF" condition="&quot;${no_result_text}&quot;==&quot;No records found.&quot;">
-<kw name="Fail" library="BuiltIn">
-<arg>No results for created object</arg>
-<doc>Fails the test with the given message and optionally alters its tags.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.779" endtime="20220509 11:45:53.779"/>
-</kw>
-<status status="NOT RUN" starttime="20220509 11:45:53.779" endtime="20220509 11:45:53.779"/>
-</branch>
-<branch type="ELSE">
-<kw name="Get Element Count" library="SeleniumLibrary">
-<var>${count_results}</var>
-<arg>xpath://*[@id="j_idt80_data"]//td[1]</arg>
-<doc>Returns the number of elements matching ``locator``.</doc>
-<msg timestamp="20220509 11:45:53.786" level="INFO">${count_results} = 2</msg>
-<status status="PASS" starttime="20220509 11:45:53.779" endtime="20220509 11:45:53.786"/>
-</kw>
-<while condition="${one} != ${count_results}">
-<iter>
-<kw name="Catenate" library="BuiltIn">
-<var>${xpath_request}</var>
-<arg>xpath:(//*[@id="j_idt80_data"]//td[1])[${one}]</arg>
-<doc>Catenates the given items together and returns the resulted string.</doc>
-<msg timestamp="20220509 11:45:53.787" level="INFO">${xpath_request} = xpath:(//*[@id="j_idt80_data"]//td[1])[1]</msg>
-<status status="PASS" starttime="20220509 11:45:53.787" endtime="20220509 11:45:53.787"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text_result}</var>
-<arg>${xpath_request}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220509 11:45:53.802" level="INFO">${text_result} = Chad318</msg>
-<status status="PASS" starttime="20220509 11:45:53.787" endtime="20220509 11:45:53.802"/>
-</kw>
-<if>
-<branch type="IF" condition="&quot;${type}&quot;==&quot;equals&quot;">
-<kw name="Log" library="BuiltIn">
-<arg>${one}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.802" endtime="20220509 11:45:53.802"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.802" endtime="20220509 11:45:53.802"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${text_result}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.802" endtime="20220509 11:45:53.802"/>
-</kw>
-<if>
-<branch type="IF" condition="&quot;${text}&quot;==&quot;${text_result}&quot;">
-<kw name="Evaluate" library="BuiltIn">
-<var>${one}</var>
-<arg>${one} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.803" endtime="20220509 11:45:53.803"/>
-</kw>
-<kw name="Continue For Loop" library="BuiltIn">
-<doc>Skips the current FOR loop iteration and continues from the next.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.803" endtime="20220509 11:45:53.803"/>
-</kw>
-<status status="NOT RUN" starttime="20220509 11:45:53.803" endtime="20220509 11:45:53.803"/>
-</branch>
-<branch type="ELSE">
-<kw name="Fail" library="BuiltIn">
-<arg>Search result does not match the equals requirement</arg>
-<doc>Fails the test with the given message and optionally alters its tags.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.803" endtime="20220509 11:45:53.803"/>
-</kw>
-<break>
-<status status="NOT RUN" starttime="20220509 11:45:53.803" endtime="20220509 11:45:53.803"/>
-</break>
-<status status="NOT RUN" starttime="20220509 11:45:53.803" endtime="20220509 11:45:53.803"/>
-</branch>
-<status status="NOT RUN" starttime="20220509 11:45:53.802" endtime="20220509 11:45:53.803"/>
-</if>
-<kw name="Pass Execution" library="BuiltIn">
-<arg>All results are equal to query</arg>
-<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.803" endtime="20220509 11:45:53.803"/>
-</kw>
-<status status="NOT RUN" starttime="20220509 11:45:53.802" endtime="20220509 11:45:53.803"/>
-</branch>
-<status status="PASS" starttime="20220509 11:45:53.802" endtime="20220509 11:45:53.803"/>
-</if>
-<if>
-<branch type="IF" condition="&quot;${type}&quot;==&quot;contains&quot;">
-<kw name="Result Contains" library="variables">
-<var>${bool_value}</var>
-<arg>${text_result}</arg>
-<arg>${text}</arg>
-<msg timestamp="20220509 11:45:53.804" level="INFO">${bool_value} = True</msg>
-<status status="PASS" starttime="20220509 11:45:53.804" endtime="20220509 11:45:53.804"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${one}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220509 11:45:53.804" level="INFO">1</msg>
-<status status="PASS" starttime="20220509 11:45:53.804" endtime="20220509 11:45:53.804"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220509 11:45:53.804" level="INFO">Chad</msg>
-<status status="PASS" starttime="20220509 11:45:53.804" endtime="20220509 11:45:53.804"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${text_result}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220509 11:45:53.805" level="INFO">Chad318</msg>
-<status status="PASS" starttime="20220509 11:45:53.805" endtime="20220509 11:45:53.805"/>
-</kw>
-<if>
-<branch type="IF" condition="${bool_value}">
-<kw name="Evaluate" library="BuiltIn">
-<var>${one}</var>
-<arg>${one} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20220509 11:45:53.805" level="INFO">${one} = 2</msg>
-<status status="PASS" starttime="20220509 11:45:53.805" endtime="20220509 11:45:53.805"/>
-</kw>
-<kw name="Continue For Loop" library="BuiltIn">
-<doc>Skips the current FOR loop iteration and continues from the next.</doc>
-<msg timestamp="20220509 11:45:53.805" level="INFO">Continuing for loop from the next iteration.</msg>
-<status status="PASS" starttime="20220509 11:45:53.805" endtime="20220509 11:45:53.806"/>
-</kw>
-<status status="PASS" starttime="20220509 11:45:53.805" endtime="20220509 11:45:53.806"/>
-</branch>
-<branch type="ELSE">
-<kw name="Fail" library="BuiltIn">
-<arg>Search result does not match the equals requirement</arg>
-<doc>Fails the test with the given message and optionally alters its tags.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.806" endtime="20220509 11:45:53.806"/>
-</kw>
-<break>
-<status status="NOT RUN" starttime="20220509 11:45:53.806" endtime="20220509 11:45:53.807"/>
-</break>
-<status status="NOT RUN" starttime="20220509 11:45:53.806" endtime="20220509 11:45:53.807"/>
-</branch>
-<status status="PASS" starttime="20220509 11:45:53.805" endtime="20220509 11:45:53.807"/>
-</if>
-<kw name="Pass Execution" library="BuiltIn">
-<arg>All results are equal to query</arg>
-<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.807" endtime="20220509 11:45:53.807"/>
-</kw>
-<status status="PASS" starttime="20220509 11:45:53.803" endtime="20220509 11:45:53.807"/>
-</branch>
-<status status="PASS" starttime="20220509 11:45:53.803" endtime="20220509 11:45:53.807"/>
-</if>
-<if>
-<branch type="IF" condition="&quot;${type}&quot;==&quot;start&quot;">
-<kw name="Result Contains" library="variables">
-<var>${bool_value}</var>
-<arg>${text_result}</arg>
-<arg>${text}</arg>
-<status status="NOT RUN" starttime="20220509 11:45:53.807" endtime="20220509 11:45:53.807"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${one}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.807" endtime="20220509 11:45:53.807"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.807" endtime="20220509 11:45:53.807"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${text_result}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.807" endtime="20220509 11:45:53.807"/>
-</kw>
-<if>
-<branch type="IF" condition="${bool_value}">
-<kw name="Evaluate" library="BuiltIn">
-<var>${one}</var>
-<arg>${one} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.807" endtime="20220509 11:45:53.808"/>
-</kw>
-<kw name="Continue For Loop" library="BuiltIn">
-<doc>Skips the current FOR loop iteration and continues from the next.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.808" endtime="20220509 11:45:53.808"/>
-</kw>
-<status status="NOT RUN" starttime="20220509 11:45:53.807" endtime="20220509 11:45:53.808"/>
-</branch>
-<branch type="ELSE">
-<kw name="Fail" library="BuiltIn">
-<arg>Search result does not match the equals requirement</arg>
-<doc>Fails the test with the given message and optionally alters its tags.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.808" endtime="20220509 11:45:53.808"/>
-</kw>
-<break>
-<status status="NOT RUN" starttime="20220509 11:45:53.808" endtime="20220509 11:45:53.808"/>
-</break>
-<status status="NOT RUN" starttime="20220509 11:45:53.808" endtime="20220509 11:45:53.808"/>
-</branch>
-<status status="NOT RUN" starttime="20220509 11:45:53.807" endtime="20220509 11:45:53.808"/>
-</if>
-<kw name="Pass Execution" library="BuiltIn">
-<arg>All results are equal to query</arg>
-<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.808" endtime="20220509 11:45:53.808"/>
-</kw>
-<status status="NOT RUN" starttime="20220509 11:45:53.807" endtime="20220509 11:45:53.808"/>
-</branch>
-<status status="NOT RUN" starttime="20220509 11:45:53.807" endtime="20220509 11:45:53.808"/>
-</if>
-<if>
-<branch type="IF" condition="&quot;${type}&quot;==&quot;end&quot;">
-<kw name="Result Contains" library="variables">
-<var>${bool_value}</var>
-<arg>${text_result}</arg>
-<arg>${text}</arg>
-<status status="NOT RUN" starttime="20220509 11:45:53.808" endtime="20220509 11:45:53.808"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${one}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.808" endtime="20220509 11:45:53.808"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.808" endtime="20220509 11:45:53.809"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${text_result}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.809" endtime="20220509 11:45:53.809"/>
-</kw>
-<if>
-<branch type="IF" condition="${bool_value}">
-<kw name="Evaluate" library="BuiltIn">
-<var>${one}</var>
-<arg>${one} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.809" endtime="20220509 11:45:53.809"/>
-</kw>
-<kw name="Continue For Loop" library="BuiltIn">
-<doc>Skips the current FOR loop iteration and continues from the next.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.809" endtime="20220509 11:45:53.809"/>
-</kw>
-<status status="NOT RUN" starttime="20220509 11:45:53.809" endtime="20220509 11:45:53.809"/>
-</branch>
-<branch type="ELSE">
-<kw name="Fail" library="BuiltIn">
-<arg>Search result does not match the equals requirement</arg>
-<doc>Fails the test with the given message and optionally alters its tags.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.809" endtime="20220509 11:45:53.809"/>
-</kw>
-<break>
-<status status="NOT RUN" starttime="20220509 11:45:53.809" endtime="20220509 11:45:53.809"/>
-</break>
-<status status="NOT RUN" starttime="20220509 11:45:53.809" endtime="20220509 11:45:53.809"/>
-</branch>
-<status status="NOT RUN" starttime="20220509 11:45:53.809" endtime="20220509 11:45:53.809"/>
-</if>
-<kw name="Pass Execution" library="BuiltIn">
-<arg>All results are equal to query</arg>
-<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:53.809" endtime="20220509 11:45:53.809"/>
-</kw>
-<status status="NOT RUN" starttime="20220509 11:45:53.808" endtime="20220509 11:45:53.809"/>
-</branch>
-<status status="NOT RUN" starttime="20220509 11:45:53.808" endtime="20220509 11:45:53.809"/>
-</if>
-<status status="PASS" starttime="20220509 11:45:53.786" endtime="20220509 11:45:53.809"/>
-</iter>
-<status status="PASS" starttime="20220509 11:45:53.786" endtime="20220509 11:45:53.810"/>
-</while>
-<status status="PASS" starttime="20220509 11:45:53.779" endtime="20220509 11:45:53.810"/>
-</branch>
-<status status="PASS" starttime="20220509 11:45:53.779" endtime="20220509 11:45:53.810"/>
-</if>
-<status status="PASS" starttime="20220509 11:45:53.570" endtime="20220509 11:45:53.810"/>
-</kw>
-<kw name="Clear Element Text" library="SeleniumLibrary">
-<arg>id:search_form:name</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" starttime="20220509 11:45:53.810" endtime="20220509 11:45:53.849"/>
-</kw>
-<kw name="Get Part Of String" library="variables">
-<var>${text2}</var>
-<arg>${text}</arg>
-<arg>start</arg>
-<msg timestamp="20220509 11:45:53.850" level="INFO">8</msg>
-<msg timestamp="20220509 11:45:53.850" level="INFO">${text2} = Chad</msg>
-<status status="PASS" starttime="20220509 11:45:53.850" endtime="20220509 11:45:53.850"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id:search_form:name</arg>
-<arg>${text2}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220509 11:45:53.851" level="INFO">Typing text 'Chad' into text field 'id:search_form:name'.</msg>
-<status status="PASS" starttime="20220509 11:45:53.851" endtime="20220509 11:45:53.922"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath://select[@name='search_form:j_idt69']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220509 11:45:53.922" level="INFO">Clicking element 'xpath://select[@name='search_form:j_idt69']'.</msg>
-<status status="PASS" starttime="20220509 11:45:53.922" endtime="20220509 11:45:53.979"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath://option[text()='start with']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220509 11:45:53.980" level="INFO">Clicking element 'xpath://option[text()='start with']'.</msg>
-<status status="PASS" starttime="20220509 11:45:53.979" endtime="20220509 11:45:54.019"/>
-</kw>
-<kw name="Check response data" library="resources">
-<arg>${text2}</arg>
-<arg>start</arg>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>xpath://input[@name='search_form:j_idt77']</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220509 11:45:54.021" level="INFO">Clicking button 'xpath://input[@name='search_form:j_idt77']'.</msg>
-<status status="PASS" starttime="20220509 11:45:54.020" endtime="20220509 11:45:54.313"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${no_result_text}</var>
-<arg>xpath://*[@id="j_idt80_data"]//td[1]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220509 11:45:54.339" level="INFO">${no_result_text} = Chad318</msg>
-<status status="PASS" starttime="20220509 11:45:54.313" endtime="20220509 11:45:54.339"/>
-</kw>
-<if>
-<branch type="IF" condition="&quot;${no_result_text}&quot;==&quot;No records found.&quot;">
-<kw name="Fail" library="BuiltIn">
-<arg>No results for created object</arg>
-<doc>Fails the test with the given message and optionally alters its tags.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.339" endtime="20220509 11:45:54.340"/>
-</kw>
-<status status="NOT RUN" starttime="20220509 11:45:54.339" endtime="20220509 11:45:54.340"/>
-</branch>
-<branch type="ELSE">
-<kw name="Get Element Count" library="SeleniumLibrary">
-<var>${count_results}</var>
-<arg>xpath://*[@id="j_idt80_data"]//td[1]</arg>
-<doc>Returns the number of elements matching ``locator``.</doc>
-<msg timestamp="20220509 11:45:54.346" level="INFO">${count_results} = 2</msg>
-<status status="PASS" starttime="20220509 11:45:54.340" endtime="20220509 11:45:54.346"/>
-</kw>
-<while condition="${one} != ${count_results}">
-<iter>
-<kw name="Catenate" library="BuiltIn">
-<var>${xpath_request}</var>
-<arg>xpath:(//*[@id="j_idt80_data"]//td[1])[${one}]</arg>
-<doc>Catenates the given items together and returns the resulted string.</doc>
-<msg timestamp="20220509 11:45:54.347" level="INFO">${xpath_request} = xpath:(//*[@id="j_idt80_data"]//td[1])[1]</msg>
-<status status="PASS" starttime="20220509 11:45:54.346" endtime="20220509 11:45:54.347"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text_result}</var>
-<arg>${xpath_request}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220509 11:45:54.363" level="INFO">${text_result} = Chad318</msg>
-<status status="PASS" starttime="20220509 11:45:54.347" endtime="20220509 11:45:54.363"/>
-</kw>
-<if>
-<branch type="IF" condition="&quot;${type}&quot;==&quot;equals&quot;">
-<kw name="Log" library="BuiltIn">
-<arg>${one}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.364" endtime="20220509 11:45:54.364"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.364" endtime="20220509 11:45:54.364"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${text_result}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.364" endtime="20220509 11:45:54.364"/>
-</kw>
-<if>
-<branch type="IF" condition="&quot;${text}&quot;==&quot;${text_result}&quot;">
-<kw name="Evaluate" library="BuiltIn">
-<var>${one}</var>
-<arg>${one} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.364" endtime="20220509 11:45:54.364"/>
-</kw>
-<kw name="Continue For Loop" library="BuiltIn">
-<doc>Skips the current FOR loop iteration and continues from the next.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.364" endtime="20220509 11:45:54.364"/>
-</kw>
-<status status="NOT RUN" starttime="20220509 11:45:54.364" endtime="20220509 11:45:54.364"/>
-</branch>
-<branch type="ELSE">
-<kw name="Fail" library="BuiltIn">
-<arg>Search result does not match the equals requirement</arg>
-<doc>Fails the test with the given message and optionally alters its tags.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.365" endtime="20220509 11:45:54.365"/>
-</kw>
-<break>
-<status status="NOT RUN" starttime="20220509 11:45:54.365" endtime="20220509 11:45:54.365"/>
-</break>
-<status status="NOT RUN" starttime="20220509 11:45:54.364" endtime="20220509 11:45:54.365"/>
-</branch>
-<status status="NOT RUN" starttime="20220509 11:45:54.364" endtime="20220509 11:45:54.365"/>
-</if>
-<kw name="Pass Execution" library="BuiltIn">
-<arg>All results are equal to query</arg>
-<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.365" endtime="20220509 11:45:54.365"/>
-</kw>
-<status status="NOT RUN" starttime="20220509 11:45:54.364" endtime="20220509 11:45:54.365"/>
-</branch>
-<status status="PASS" starttime="20220509 11:45:54.364" endtime="20220509 11:45:54.365"/>
-</if>
-<if>
-<branch type="IF" condition="&quot;${type}&quot;==&quot;contains&quot;">
-<kw name="Result Contains" library="variables">
-<var>${bool_value}</var>
-<arg>${text_result}</arg>
-<arg>${text}</arg>
-<status status="NOT RUN" starttime="20220509 11:45:54.365" endtime="20220509 11:45:54.365"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${one}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.365" endtime="20220509 11:45:54.365"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.365" endtime="20220509 11:45:54.365"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${text_result}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.365" endtime="20220509 11:45:54.365"/>
-</kw>
-<if>
-<branch type="IF" condition="${bool_value}">
-<kw name="Evaluate" library="BuiltIn">
-<var>${one}</var>
-<arg>${one} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.366" endtime="20220509 11:45:54.366"/>
-</kw>
-<kw name="Continue For Loop" library="BuiltIn">
-<doc>Skips the current FOR loop iteration and continues from the next.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.366" endtime="20220509 11:45:54.366"/>
-</kw>
-<status status="NOT RUN" starttime="20220509 11:45:54.365" endtime="20220509 11:45:54.366"/>
-</branch>
-<branch type="ELSE">
-<kw name="Fail" library="BuiltIn">
-<arg>Search result does not match the equals requirement</arg>
-<doc>Fails the test with the given message and optionally alters its tags.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.366" endtime="20220509 11:45:54.366"/>
-</kw>
-<break>
-<status status="NOT RUN" starttime="20220509 11:45:54.366" endtime="20220509 11:45:54.366"/>
-</break>
-<status status="NOT RUN" starttime="20220509 11:45:54.366" endtime="20220509 11:45:54.366"/>
-</branch>
-<status status="NOT RUN" starttime="20220509 11:45:54.365" endtime="20220509 11:45:54.366"/>
-</if>
-<kw name="Pass Execution" library="BuiltIn">
-<arg>All results are equal to query</arg>
-<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.366" endtime="20220509 11:45:54.366"/>
-</kw>
-<status status="NOT RUN" starttime="20220509 11:45:54.365" endtime="20220509 11:45:54.366"/>
-</branch>
-<status status="PASS" starttime="20220509 11:45:54.365" endtime="20220509 11:45:54.366"/>
-</if>
-<if>
-<branch type="IF" condition="&quot;${type}&quot;==&quot;start&quot;">
-<kw name="Result Contains" library="variables">
-<var>${bool_value}</var>
-<arg>${text_result}</arg>
-<arg>${text}</arg>
-<msg timestamp="20220509 11:45:54.367" level="INFO">${bool_value} = True</msg>
-<status status="PASS" starttime="20220509 11:45:54.367" endtime="20220509 11:45:54.367"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${one}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220509 11:45:54.368" level="INFO">1</msg>
-<status status="PASS" starttime="20220509 11:45:54.367" endtime="20220509 11:45:54.368"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220509 11:45:54.368" level="INFO">Chad</msg>
-<status status="PASS" starttime="20220509 11:45:54.368" endtime="20220509 11:45:54.368"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${text_result}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220509 11:45:54.368" level="INFO">Chad318</msg>
-<status status="PASS" starttime="20220509 11:45:54.368" endtime="20220509 11:45:54.369"/>
-</kw>
-<if>
-<branch type="IF" condition="${bool_value}">
-<kw name="Evaluate" library="BuiltIn">
-<var>${one}</var>
-<arg>${one} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20220509 11:45:54.369" level="INFO">${one} = 2</msg>
-<status status="PASS" starttime="20220509 11:45:54.369" endtime="20220509 11:45:54.369"/>
-</kw>
-<kw name="Continue For Loop" library="BuiltIn">
-<doc>Skips the current FOR loop iteration and continues from the next.</doc>
-<msg timestamp="20220509 11:45:54.370" level="INFO">Continuing for loop from the next iteration.</msg>
-<status status="PASS" starttime="20220509 11:45:54.369" endtime="20220509 11:45:54.370"/>
-</kw>
-<status status="PASS" starttime="20220509 11:45:54.369" endtime="20220509 11:45:54.370"/>
-</branch>
-<branch type="ELSE">
-<kw name="Fail" library="BuiltIn">
-<arg>Search result does not match the equals requirement</arg>
-<doc>Fails the test with the given message and optionally alters its tags.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.370" endtime="20220509 11:45:54.370"/>
-</kw>
-<break>
-<status status="NOT RUN" starttime="20220509 11:45:54.370" endtime="20220509 11:45:54.370"/>
-</break>
-<status status="NOT RUN" starttime="20220509 11:45:54.370" endtime="20220509 11:45:54.371"/>
-</branch>
-<status status="PASS" starttime="20220509 11:45:54.369" endtime="20220509 11:45:54.371"/>
-</if>
-<kw name="Pass Execution" library="BuiltIn">
-<arg>All results are equal to query</arg>
-<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.371" endtime="20220509 11:45:54.371"/>
-</kw>
-<status status="PASS" starttime="20220509 11:45:54.367" endtime="20220509 11:45:54.371"/>
-</branch>
-<status status="PASS" starttime="20220509 11:45:54.366" endtime="20220509 11:45:54.371"/>
-</if>
-<if>
-<branch type="IF" condition="&quot;${type}&quot;==&quot;end&quot;">
-<kw name="Result Contains" library="variables">
-<var>${bool_value}</var>
-<arg>${text_result}</arg>
-<arg>${text}</arg>
-<status status="NOT RUN" starttime="20220509 11:45:54.371" endtime="20220509 11:45:54.371"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${one}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.371" endtime="20220509 11:45:54.372"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.372" endtime="20220509 11:45:54.372"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${text_result}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.372" endtime="20220509 11:45:54.372"/>
-</kw>
-<if>
-<branch type="IF" condition="${bool_value}">
-<kw name="Evaluate" library="BuiltIn">
-<var>${one}</var>
-<arg>${one} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.372" endtime="20220509 11:45:54.372"/>
-</kw>
-<kw name="Continue For Loop" library="BuiltIn">
-<doc>Skips the current FOR loop iteration and continues from the next.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.372" endtime="20220509 11:45:54.372"/>
-</kw>
-<status status="NOT RUN" starttime="20220509 11:45:54.372" endtime="20220509 11:45:54.372"/>
-</branch>
-<branch type="ELSE">
-<kw name="Fail" library="BuiltIn">
-<arg>Search result does not match the equals requirement</arg>
-<doc>Fails the test with the given message and optionally alters its tags.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.373" endtime="20220509 11:45:54.373"/>
-</kw>
-<break>
-<status status="NOT RUN" starttime="20220509 11:45:54.373" endtime="20220509 11:45:54.373"/>
-</break>
-<status status="NOT RUN" starttime="20220509 11:45:54.373" endtime="20220509 11:45:54.373"/>
-</branch>
-<status status="NOT RUN" starttime="20220509 11:45:54.372" endtime="20220509 11:45:54.373"/>
-</if>
-<kw name="Pass Execution" library="BuiltIn">
-<arg>All results are equal to query</arg>
-<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.373" endtime="20220509 11:45:54.373"/>
-</kw>
-<status status="NOT RUN" starttime="20220509 11:45:54.371" endtime="20220509 11:45:54.373"/>
-</branch>
-<status status="NOT RUN" starttime="20220509 11:45:54.371" endtime="20220509 11:45:54.373"/>
-</if>
-<status status="PASS" starttime="20220509 11:45:54.346" endtime="20220509 11:45:54.373"/>
-</iter>
-<status status="PASS" starttime="20220509 11:45:54.346" endtime="20220509 11:45:54.373"/>
-</while>
-<status status="PASS" starttime="20220509 11:45:54.340" endtime="20220509 11:45:54.374"/>
-</branch>
-<status status="PASS" starttime="20220509 11:45:54.339" endtime="20220509 11:45:54.374"/>
-</if>
-<status status="PASS" starttime="20220509 11:45:54.019" endtime="20220509 11:45:54.374"/>
-</kw>
-<kw name="Clear Element Text" library="SeleniumLibrary">
-<arg>id:search_form:name</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" starttime="20220509 11:45:54.374" endtime="20220509 11:45:54.416"/>
-</kw>
-<kw name="Get Part Of String" library="variables">
-<var>${text2}</var>
-<arg>${text}</arg>
-<arg>end</arg>
-<msg timestamp="20220509 11:45:54.417" level="INFO">8</msg>
-<msg timestamp="20220509 11:45:54.417" level="INFO">${text2} = 8260</msg>
-<status status="PASS" starttime="20220509 11:45:54.416" endtime="20220509 11:45:54.417"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id:search_form:name</arg>
-<arg>${text2}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220509 11:45:54.418" level="INFO">Typing text '8260' into text field 'id:search_form:name'.</msg>
-<status status="PASS" starttime="20220509 11:45:54.417" endtime="20220509 11:45:54.490"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath://select[@name='search_form:j_idt69']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220509 11:45:54.490" level="INFO">Clicking element 'xpath://select[@name='search_form:j_idt69']'.</msg>
-<status status="PASS" starttime="20220509 11:45:54.490" endtime="20220509 11:45:54.550"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath://option[text()='end with']\</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220509 11:45:54.550" level="INFO">Clicking element 'xpath://option[text()='end with']'.</msg>
-<status status="PASS" starttime="20220509 11:45:54.550" endtime="20220509 11:45:54.617"/>
-</kw>
-<kw name="Check response data" library="resources">
-<arg>${text2}</arg>
-<arg>end</arg>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>xpath://input[@name='search_form:j_idt77']</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220509 11:45:54.618" level="INFO">Clicking button 'xpath://input[@name='search_form:j_idt77']'.</msg>
-<status status="PASS" starttime="20220509 11:45:54.618" endtime="20220509 11:45:54.792"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${no_result_text}</var>
-<arg>xpath://*[@id="j_idt80_data"]//td[1]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220509 11:45:54.817" level="INFO">${no_result_text} = Chad8260</msg>
-<status status="PASS" starttime="20220509 11:45:54.793" endtime="20220509 11:45:54.817"/>
-</kw>
-<if>
-<branch type="IF" condition="&quot;${no_result_text}&quot;==&quot;No records found.&quot;">
-<kw name="Fail" library="BuiltIn">
-<arg>No results for created object</arg>
-<doc>Fails the test with the given message and optionally alters its tags.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.817" endtime="20220509 11:45:54.817"/>
-</kw>
-<status status="NOT RUN" starttime="20220509 11:45:54.817" endtime="20220509 11:45:54.817"/>
-</branch>
-<branch type="ELSE">
-<kw name="Get Element Count" library="SeleniumLibrary">
-<var>${count_results}</var>
-<arg>xpath://*[@id="j_idt80_data"]//td[1]</arg>
-<doc>Returns the number of elements matching ``locator``.</doc>
-<msg timestamp="20220509 11:45:54.825" level="INFO">${count_results} = 1</msg>
-<status status="PASS" starttime="20220509 11:45:54.818" endtime="20220509 11:45:54.825"/>
-</kw>
-<while condition="${one} != ${count_results}">
-<iter>
-<kw name="Catenate" library="BuiltIn">
-<var>${xpath_request}</var>
-<arg>xpath:(//*[@id="j_idt80_data"]//td[1])[${one}]</arg>
-<doc>Catenates the given items together and returns the resulted string.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.826" endtime="20220509 11:45:54.826"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text_result}</var>
-<arg>${xpath_request}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.826" endtime="20220509 11:45:54.826"/>
-</kw>
-<if>
-<branch type="IF" condition="&quot;${type}&quot;==&quot;equals&quot;">
-<kw name="Log" library="BuiltIn">
-<arg>${one}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.826" endtime="20220509 11:45:54.826"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.826" endtime="20220509 11:45:54.827"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${text_result}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.827" endtime="20220509 11:45:54.827"/>
-</kw>
-<if>
-<branch type="IF" condition="&quot;${text}&quot;==&quot;${text_result}&quot;">
-<kw name="Evaluate" library="BuiltIn">
-<var>${one}</var>
-<arg>${one} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.827" endtime="20220509 11:45:54.827"/>
-</kw>
-<kw name="Continue For Loop" library="BuiltIn">
-<doc>Skips the current FOR loop iteration and continues from the next.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.827" endtime="20220509 11:45:54.827"/>
-</kw>
-<status status="NOT RUN" starttime="20220509 11:45:54.827" endtime="20220509 11:45:54.827"/>
-</branch>
-<branch type="ELSE">
-<kw name="Fail" library="BuiltIn">
-<arg>Search result does not match the equals requirement</arg>
-<doc>Fails the test with the given message and optionally alters its tags.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.828" endtime="20220509 11:45:54.828"/>
-</kw>
-<break>
-<status status="NOT RUN" starttime="20220509 11:45:54.828" endtime="20220509 11:45:54.828"/>
-</break>
-<status status="NOT RUN" starttime="20220509 11:45:54.828" endtime="20220509 11:45:54.828"/>
-</branch>
-<status status="NOT RUN" starttime="20220509 11:45:54.827" endtime="20220509 11:45:54.828"/>
-</if>
-<kw name="Pass Execution" library="BuiltIn">
-<arg>All results are equal to query</arg>
-<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.828" endtime="20220509 11:45:54.828"/>
-</kw>
-<status status="NOT RUN" starttime="20220509 11:45:54.826" endtime="20220509 11:45:54.828"/>
-</branch>
-<status status="NOT RUN" starttime="20220509 11:45:54.826" endtime="20220509 11:45:54.828"/>
-</if>
-<if>
-<branch type="IF" condition="&quot;${type}&quot;==&quot;contains&quot;">
-<kw name="Result Contains" library="variables">
-<var>${bool_value}</var>
-<arg>${text_result}</arg>
-<arg>${text}</arg>
-<status status="NOT RUN" starttime="20220509 11:45:54.828" endtime="20220509 11:45:54.829"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${one}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.829" endtime="20220509 11:45:54.829"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.829" endtime="20220509 11:45:54.829"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${text_result}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.829" endtime="20220509 11:45:54.829"/>
-</kw>
-<if>
-<branch type="IF" condition="${bool_value}">
-<kw name="Evaluate" library="BuiltIn">
-<var>${one}</var>
-<arg>${one} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.829" endtime="20220509 11:45:54.829"/>
-</kw>
-<kw name="Continue For Loop" library="BuiltIn">
-<doc>Skips the current FOR loop iteration and continues from the next.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.830" endtime="20220509 11:45:54.830"/>
-</kw>
-<status status="NOT RUN" starttime="20220509 11:45:54.829" endtime="20220509 11:45:54.830"/>
-</branch>
-<branch type="ELSE">
-<kw name="Fail" library="BuiltIn">
-<arg>Search result does not match the equals requirement</arg>
-<doc>Fails the test with the given message and optionally alters its tags.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.830" endtime="20220509 11:45:54.830"/>
-</kw>
-<break>
-<status status="NOT RUN" starttime="20220509 11:45:54.830" endtime="20220509 11:45:54.830"/>
-</break>
-<status status="NOT RUN" starttime="20220509 11:45:54.830" endtime="20220509 11:45:54.830"/>
-</branch>
-<status status="NOT RUN" starttime="20220509 11:45:54.829" endtime="20220509 11:45:54.830"/>
-</if>
-<kw name="Pass Execution" library="BuiltIn">
-<arg>All results are equal to query</arg>
-<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.831" endtime="20220509 11:45:54.831"/>
-</kw>
-<status status="NOT RUN" starttime="20220509 11:45:54.828" endtime="20220509 11:45:54.831"/>
-</branch>
-<status status="NOT RUN" starttime="20220509 11:45:54.828" endtime="20220509 11:45:54.831"/>
-</if>
-<if>
-<branch type="IF" condition="&quot;${type}&quot;==&quot;start&quot;">
-<kw name="Result Contains" library="variables">
-<var>${bool_value}</var>
-<arg>${text_result}</arg>
-<arg>${text}</arg>
-<status status="NOT RUN" starttime="20220509 11:45:54.831" endtime="20220509 11:45:54.831"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${one}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.831" endtime="20220509 11:45:54.831"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.831" endtime="20220509 11:45:54.831"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${text_result}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.831" endtime="20220509 11:45:54.832"/>
-</kw>
-<if>
-<branch type="IF" condition="${bool_value}">
-<kw name="Evaluate" library="BuiltIn">
-<var>${one}</var>
-<arg>${one} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.832" endtime="20220509 11:45:54.832"/>
-</kw>
-<kw name="Continue For Loop" library="BuiltIn">
-<doc>Skips the current FOR loop iteration and continues from the next.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.832" endtime="20220509 11:45:54.832"/>
-</kw>
-<status status="NOT RUN" starttime="20220509 11:45:54.832" endtime="20220509 11:45:54.832"/>
-</branch>
-<branch type="ELSE">
-<kw name="Fail" library="BuiltIn">
-<arg>Search result does not match the equals requirement</arg>
-<doc>Fails the test with the given message and optionally alters its tags.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.832" endtime="20220509 11:45:54.832"/>
-</kw>
-<break>
-<status status="NOT RUN" starttime="20220509 11:45:54.832" endtime="20220509 11:45:54.832"/>
-</break>
-<status status="NOT RUN" starttime="20220509 11:45:54.832" endtime="20220509 11:45:54.832"/>
-</branch>
-<status status="NOT RUN" starttime="20220509 11:45:54.832" endtime="20220509 11:45:54.832"/>
-</if>
-<kw name="Pass Execution" library="BuiltIn">
-<arg>All results are equal to query</arg>
-<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.833" endtime="20220509 11:45:54.833"/>
-</kw>
-<status status="NOT RUN" starttime="20220509 11:45:54.831" endtime="20220509 11:45:54.833"/>
-</branch>
-<status status="NOT RUN" starttime="20220509 11:45:54.831" endtime="20220509 11:45:54.833"/>
-</if>
-<if>
-<branch type="IF" condition="&quot;${type}&quot;==&quot;end&quot;">
-<kw name="Result Contains" library="variables">
-<var>${bool_value}</var>
-<arg>${text_result}</arg>
-<arg>${text}</arg>
-<status status="NOT RUN" starttime="20220509 11:45:54.833" endtime="20220509 11:45:54.833"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${one}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.833" endtime="20220509 11:45:54.833"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.833" endtime="20220509 11:45:54.833"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${text_result}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.834" endtime="20220509 11:45:54.834"/>
-</kw>
-<if>
-<branch type="IF" condition="${bool_value}">
-<kw name="Evaluate" library="BuiltIn">
-<var>${one}</var>
-<arg>${one} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.834" endtime="20220509 11:45:54.834"/>
-</kw>
-<kw name="Continue For Loop" library="BuiltIn">
-<doc>Skips the current FOR loop iteration and continues from the next.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.834" endtime="20220509 11:45:54.834"/>
-</kw>
-<status status="NOT RUN" starttime="20220509 11:45:54.834" endtime="20220509 11:45:54.834"/>
-</branch>
-<branch type="ELSE">
-<kw name="Fail" library="BuiltIn">
-<arg>Search result does not match the equals requirement</arg>
-<doc>Fails the test with the given message and optionally alters its tags.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.834" endtime="20220509 11:45:54.835"/>
-</kw>
-<break>
-<status status="NOT RUN" starttime="20220509 11:45:54.835" endtime="20220509 11:45:54.835"/>
-</break>
-<status status="NOT RUN" starttime="20220509 11:45:54.834" endtime="20220509 11:45:54.835"/>
-</branch>
-<status status="NOT RUN" starttime="20220509 11:45:54.834" endtime="20220509 11:45:54.835"/>
-</if>
-<kw name="Pass Execution" library="BuiltIn">
-<arg>All results are equal to query</arg>
-<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
-<status status="NOT RUN" starttime="20220509 11:45:54.835" endtime="20220509 11:45:54.835"/>
-</kw>
-<status status="NOT RUN" starttime="20220509 11:45:54.833" endtime="20220509 11:45:54.835"/>
-</branch>
-<status status="NOT RUN" starttime="20220509 11:45:54.833" endtime="20220509 11:45:54.835"/>
-</if>
-<status status="NOT RUN" starttime="20220509 11:45:54.826" endtime="20220509 11:45:54.835"/>
-</iter>
-<status status="NOT RUN" starttime="20220509 11:45:54.825" endtime="20220509 11:45:54.835"/>
-</while>
-<status status="PASS" starttime="20220509 11:45:54.817" endtime="20220509 11:45:54.835"/>
-</branch>
-<status status="PASS" starttime="20220509 11:45:54.817" endtime="20220509 11:45:54.835"/>
-</if>
-<status status="PASS" starttime="20220509 11:45:54.617" endtime="20220509 11:45:54.835"/>
-</kw>
-<status status="PASS" starttime="20220509 11:45:51.234" endtime="20220509 11:45:54.836"/>
+<status status="FAIL" starttime="20220510 14:26:43.981" endtime="20220510 14:26:44.375"/>
 </kw>
 <kw name="Create test cases screenshot" library="resources">
-<kw name="Set Screenshot Directory" library="SeleniumLibrary">
-<arg>./test_cases/screenshots</arg>
-<doc>Sets the directory for captured screenshots.</doc>
-<status status="PASS" starttime="20220509 11:45:54.836" endtime="20220509 11:45:54.837"/>
-</kw>
-<kw name="Capture Page Screenshot" library="SeleniumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20220509 11:45:54.944" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="test_cases/screenshots/selenium-screenshot-3.png"&gt;&lt;img src="test_cases/screenshots/selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220509 11:45:54.837" endtime="20220509 11:45:54.944"/>
-</kw>
-<status status="PASS" starttime="20220509 11:45:54.836" endtime="20220509 11:45:54.944"/>
+<status status="NOT RUN" starttime="20220510 14:26:44.375" endtime="20220510 14:26:44.375"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220509 11:45:54.945" endtime="20220509 11:45:55.007"/>
+<status status="PASS" starttime="20220510 14:26:44.376" endtime="20220510 14:26:44.385"/>
 </kw>
-<status status="PASS" starttime="20220509 11:45:48.383" endtime="20220509 11:45:55.007"/>
+<status status="FAIL" starttime="20220510 14:26:40.832" endtime="20220510 14:26:44.385">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=96.0.4664.45)
+</status>
 </test>
-<status status="PASS" starttime="20220509 11:45:48.208" endtime="20220509 11:45:55.008"/>
+<status status="FAIL" starttime="20220510 14:26:40.637" endtime="20220510 14:26:44.386"/>
 </suite>
-<status status="PASS" starttime="20220509 11:45:48.207" endtime="20220509 11:45:55.009"/>
+<status status="FAIL" starttime="20220510 14:26:40.636" endtime="20220510 14:26:44.387"/>
 </suite>
-<status status="PASS" starttime="20220509 11:45:48.189" endtime="20220509 11:45:55.010"/>
+<status status="FAIL" starttime="20220510 14:26:40.613" endtime="20220510 14:26:44.388"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Tretyakov Sergey Final Practice">Tretyakov Sergey Final Practice</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="Test Cases">Tretyakov Sergey Final Practice.Test Cases</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Test Cases">Tretyakov Sergey Final Practice.Test Cases.Test Cases</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Tretyakov Sergey Final Practice">Tretyakov Sergey Final Practice</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Test Cases">Tretyakov Sergey Final Practice.Test Cases</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Test Cases">Tretyakov Sergey Final Practice.Test Cases.Test Cases</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20220510 14:26:44.351" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: chrome not reachable
+  (Session info: chrome=96.0.4664.45)
+</msg>
 </errors>
 </robot>

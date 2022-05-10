@@ -25,7 +25,7 @@ Go to object
   log  ${value_list}[${index}]
      IF    "${value_list}[${index}]"=="${object}"
         Fill Create Object Form  ${value_list}[${index}]
-
+        Click To Save Button
         BREAK
      ELSE
        Fill Create Object Form  ${value_list}[${index}]
@@ -40,6 +40,7 @@ Go to object
          log  ${object}
          log  ${value_list}[${index2}]
          Fill Create Object Form  ${value_list}[${index2}]
+         Click To Save Button
          BREAK
          END
        ${ind}=  Evaluate  int(${index})+int(${one})
@@ -48,7 +49,6 @@ Go to object
        click element  ${g}
      END
   END
-
 
 Check object type
   [Arguments]  ${object}
@@ -61,6 +61,8 @@ Check object attributes
   Go To Object  ${object}
   Get Attributes Of Object
   ${bool_value}=  compare_lists  ${object}  ${attributes}
+  log  ${object}
+  log  ${attributes}
   Should Be True  ${bool_value}
 
 Check Create Object And Edit
@@ -253,7 +255,7 @@ Fill Create Object Form
     input text  id:j_idt74:height  ${random_heigth}
     click link  xpath://input[@id='j_idt74:locatedInOtName']/following::a[1]
     Work With Navigation Tree
-    click link  xpath://input[@id='j_idt74:locatedInOtName']/following::a[2]
+    click link  xpath://input[@id='j_idt74:locatedInOtName']/following::a[3]
     Work With Navigation Tree
 
   END
@@ -302,19 +304,16 @@ Click on create button
   wait until element is enabled  //a[text()='Software Logo']
 
 Get type of object
-  Click To Save Button
   wait until element is visible  xpath://th[text()='Object Type']//following-sibling::td
   wait until element is enabled  xpath://th[text()='Object Type']//following-sibling::td
   ${el_type}=  get text  xpath://th[text()='Object Type']//following-sibling::td
 
-
-
 Get attributes of object
-  ${count}=  Get Element Count  //div[@id='table_data']//input/parent::td[@class='parameter']/preceding-sibling::th
+  ${count}=  Get Element Count  //div[@id='table_data']//th[text()='Modified When']/following::th
   ${count}=  Evaluate  ${count} + 1
   log  ${count}
   WHILE    ${one} != ${count}
-    ${xpath_value}=  Catenate  (//div[@id='table_data']//input/parent::td[@class='parameter']/preceding-sibling::th)[${one}]
+    ${xpath_value}=  Catenate  //div[@id='table_data']//th[text()='Modified When']/following::th[${one}]
     ${text}=  get text  ${xpath_value}
     Append To List  ${attributes}  ${text}
     ${one}=  Evaluate  ${one} + 1
