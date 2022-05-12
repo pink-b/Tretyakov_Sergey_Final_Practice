@@ -5,12 +5,15 @@ Library  String
 Variables  ./test_cases/variables.py
 Library  ./test_cases/variables.py
 
+
 *** Keywords ***
 Log in system
+  [Arguments]  ${username}  ${password}
   open browser  https://inventory.edu-netcracker.com/login.jsp?justRegistered=true  chrome
-  input text  xpath://input[@name='j_username']  Ssergexxt1554
-  input text  xpath://input[@name='j_password']  19032001stR+
+  input text  xpath://input[@name='j_username']  ${username}
+  input text  xpath://input[@name='j_password']  ${password}
   click button  xpath://input[@name='submit']
+
 Log In System And Open Inventory Menu
   open browser  https://inventory.edu-netcracker.com/login.jsp?justRegistered=true  chrome
   maximize browser window
@@ -32,7 +35,6 @@ Go to object
        Click To Save Button
        IF    "${value_list}[${index}]"=="Rack"
          ${index2}=  Get Index From List  ${value_list}  ${object}
-
          ${g}=  Catenate  xpath://a[contains(text(), '${value_list2}[${index2}]')]
          wait until element is enabled  ${g}
          click element  ${g}
@@ -54,6 +56,7 @@ Check object type
   [Arguments]  ${object}
   Go To Object  ${object}
   Get Type Of Object
+  log  ${el_type}
   List Should Contain Value  ${value_list}  ${el_type}
 
 Check object attributes
@@ -193,13 +196,13 @@ Fill Registration Form With Admin Role
   click element  xpath://option[@value='Admin']
   click button  xpath://input[@name='registerForm:j_idt26']
 
-Check Role Popup
+Open Role list
   click element  id:registerForm:role
-  capture page screenshot
 
 Fill Create Object Form
   [Arguments]  ${object_type}
   IF    "${object_type}"=="Country"
+
     Click On Create Button
     input text  id:j_idt74:name  ${random_country}
     input text  id:j_idt74:language  ${random_language}
@@ -297,7 +300,7 @@ Fill Create Object Form
 
 Click on create button
   wait until element is enabled  xpath://a[contains(text(), 'Create')]
-  wait until element is visible  xpath://a[contains(text(), 'Create')]
+  wait until element is visible  xpath://a[contains(text(), 'Create')]  #не будет такого большого кол во ожиданий
   scroll element into view  xpath://a[contains(text(), 'Create')]
   click link  xpath://a[contains(text(), 'Create')]
   wait until element is visible  //a[text()='Software Logo']
@@ -307,6 +310,7 @@ Get type of object
   wait until element is visible  xpath://th[text()='Object Type']//following-sibling::td
   wait until element is enabled  xpath://th[text()='Object Type']//following-sibling::td
   ${el_type}=  get text  xpath://th[text()='Object Type']//following-sibling::td
+  log  ${el_type}
 
 Get attributes of object
   ${count}=  Get Element Count  //div[@id='table_data']//th[text()='Modified When']/following::th
@@ -319,7 +323,7 @@ Get attributes of object
     ${one}=  Evaluate  ${one} + 1
   END
 
-Click to save button
+Click to save button  #создать только одну функцию для нажатие по кнопке
   click button  name:j_idt74:j_idt76
 
 Check response data

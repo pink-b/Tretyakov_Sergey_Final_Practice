@@ -55,7 +55,7 @@ attributes = []
 attributes2 = []
 none_variable = None
 
-def compare_lists(object, attributes) :
+def compare_lists(object, attributes) : #сделать словарь
     if object == "Country":
         return country_attributes == attributes
     if object == "City":

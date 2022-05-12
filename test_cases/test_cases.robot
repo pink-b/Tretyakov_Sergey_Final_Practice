@@ -121,7 +121,7 @@ Test Case 5.5
 Test Case 6.1
   [Setup]  open browser  https://inventory.edu-netcracker.com/pages/registration.xhtml  chrome
   [Teardown]  close browser
-  Check Role Popup
+  Open Role list
   Create test cases screenshot
 Test Case 8.1
   [Setup]  open browser  https://inventory.edu-netcracker.com/pages/registration.xhtml  chrome
@@ -154,13 +154,13 @@ Test Case 14.1
   page should contain  Password must match confirm password.
   Create test cases screenshot
 Test Case 15.1
-  [Setup]  Log In System
+  [Setup]  Log In System  Ssergexxt1554  19032001stR+
   [Teardown]  close browser
   Check Main Page Elements
   Create test cases screenshot
 Test Case 16.1
   [Setup]  Log In System And Open Inventory Menu
-  [Teardown]  close browser
+  #[Teardown]  close browser
   Check Object Type  Country
   Create test cases screenshot
 
