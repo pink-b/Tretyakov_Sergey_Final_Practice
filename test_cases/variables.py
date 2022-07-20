@@ -1,18 +1,20 @@
-
+import keyword
+import random
 import Random_data
 import random
 import socket
 import struct
-
+from operator import getitem
 
 random_email = Random_data.random_char(7)+"@gmail.com"
 random_username = Random_data.random_username(['sergey', 'tretyakov'])
 value_list = ['Country', 'City', 'Building', 'Floor', 'Room', 'Rack', 'Post terminal', 'Pay Box', 'ATM', 'Device']
 value_list2 = ['Countries', 'Cities', 'Buildings', 'Floors' ,'Rooms','Racks', 'Post Terminal (s)', 'Pay Box (s)', 'ATM (s)','Devices']
 value_list_length = len(value_list)
-random_country = random.choice(Random_data.countries)[1] + str(random.randint(10,10000))
-
-random_language = random_country + "language"
+def random_country() : return random.choice(Random_data.countries)[1] + str(random.randint(10,10000))
+#random_country = random_country()
+#random_country = getitem(random.choice(Random_data.countries), 2)
+random_language = random_country() + "language"
 country = "Country"
 count = 0
 random_city = Random_data.doname()
@@ -55,6 +57,9 @@ attributes = []
 attributes2 = []
 none_variable = None
 
+def clear_attributes_list() :
+    attributes.clear()
+
 def compare_lists(object, attributes) : #сделать словарь
     if object == "Country":
         return country_attributes == attributes
@@ -83,10 +88,11 @@ def get_part_of_string(str,criterio):
     if criterio=="start":
         return str[0:int(str_length/2)]
     if criterio=="end":
-        return str[int(str_length/2):int(str_length)]
+        return str[int(str_length / 2):int(str_length)]
     if criterio=="contains":
         return str[0:4]
 
+#get_part_of_string("sainkt-peterburg", "end")
 
 def result_contains(text_result, text):
     return text in text_result

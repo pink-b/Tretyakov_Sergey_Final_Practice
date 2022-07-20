@@ -160,7 +160,7 @@ Test Case 15.1
   Create test cases screenshot
 Test Case 16.1
   [Setup]  Log In System And Open Inventory Menu
-  #[Teardown]  close browser
+  [Teardown]  close browser
   Check Object Type  Country
   Create test cases screenshot
 
@@ -184,7 +184,7 @@ Test Case 16.4
 
 Test Case 16.5
   [Setup]  Log In System And Open Inventory Menu
-  [Teardown]  close browser
+  #[Teardown]  close browser
   Check Object Type  Room
   Create test cases screenshot
 
@@ -221,13 +221,13 @@ Test Case 16.10
 
 Test Case 17.1
   [Setup]  Log In System And Open Inventory Menu
-  [Teardown]  close browser
+  #[Teardown]  close browser
   Check Object Attributes  Country
   Create test cases screenshot
 
 Test Case 17.2
   [Setup]  Log In System And Open Inventory Menu
-  [Teardown]  close browser
+  #[Teardown]  close browser
   Check Object Attributes  City
   Create test cases screenshot
 
@@ -346,7 +346,8 @@ Test Case 19.1
   Check Search Box
   Create test cases screenshot
 
-
+Test Case 1
+  Check Files In Directory  Безымянный документ 1.zip  /home/sergey/directory_source  /home/sergey/directory_robot
 
 
 

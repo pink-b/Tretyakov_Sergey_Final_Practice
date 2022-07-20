@@ -2,8 +2,11 @@
 Library  SeleniumLibrary
 Library  Collections
 Library  String
+Library  OperatingSystem
 Variables  ./test_cases/variables.py
 Library  ./test_cases/variables.py
+Library  ./test_cases/keywords.py
+
 
 
 *** Keywords ***
@@ -28,7 +31,7 @@ Go to object
   log  ${value_list}[${index}]
      IF    "${value_list}[${index}]"=="${object}"
         Fill Create Object Form  ${value_list}[${index}]
-        Click To Save Button
+
         BREAK
      ELSE
        Fill Create Object Form  ${value_list}[${index}]
@@ -42,7 +45,7 @@ Go to object
          log  ${object}
          log  ${value_list}[${index2}]
          Fill Create Object Form  ${value_list}[${index2}]
-         Click To Save Button
+
          BREAK
          END
        ${ind}=  Evaluate  int(${index})+int(${one})
@@ -55,14 +58,18 @@ Go to object
 Check object type
   [Arguments]  ${object}
   Go To Object  ${object}
-  Get Type Of Object
+  Click To Save Button
+  ${el_type}=  Get Type Of Object
   log  ${el_type}
   List Should Contain Value  ${value_list}  ${el_type}
 
 Check object attributes
   [Arguments]  ${object}
+  clear_attributes_list
   Go To Object  ${object}
+  Click To Save Button
   Get Attributes Of Object
+  ${attributes}=  Remove Duplicates  ${attributes}
   ${bool_value}=  compare_lists  ${object}  ${attributes}
   log  ${object}
   log  ${attributes}
@@ -70,21 +77,26 @@ Check object attributes
 
 Check Create Object And Edit
   [Arguments]  ${object}
+  clear_attributes_list
   Go To Object  ${object}
-  Get Attributes Of Object
+  Get Attributes Of Object2
   Click To Save Button
   ${attributes2}=  Convert To List  ${attributes}
   wait until element is enabled  xpath://div[@id='table_header']//a[contains(text(), 'Edit')]
   click element  xpath://div[@id='table_header']//a[contains(text(), 'Edit')]
-  Get Attributes Of Object
+  Get Attributes Of Object2
   log  ${attributes2}
   log  ${attributes}
   ${attributes}=  Remove Duplicates  ${attributes}
+  ${attributes2}=  Remove Duplicates  ${attributes2}
+  log  ${attributes2}
+  log  ${attributes}
   Should Be True  ${attributes2}==${attributes}
+
 
 Check Search Box
   Go To Object  Country
-  Click To Save Button
+  #Click To Save Button
   ${text}=  get text  //div[@id='table_data']//*[contains(text(), 'Name')]/following-sibling::*[@class='parameter']
   log  ${text}
   input text  id:search-text-input  ${text}
@@ -202,7 +214,7 @@ Open Role list
 Fill Create Object Form
   [Arguments]  ${object_type}
   IF    "${object_type}"=="Country"
-
+    ${random_country}=  random_country
     Click On Create Button
     input text  id:j_idt74:name  ${random_country}
     input text  id:j_idt74:language  ${random_language}
@@ -311,13 +323,25 @@ Get type of object
   wait until element is enabled  xpath://th[text()='Object Type']//following-sibling::td
   ${el_type}=  get text  xpath://th[text()='Object Type']//following-sibling::td
   log  ${el_type}
+  [Return]  ${el_type}
 
 Get attributes of object
+  #Click To Save Button
   ${count}=  Get Element Count  //div[@id='table_data']//th[text()='Modified When']/following::th
   ${count}=  Evaluate  ${count} + 1
   log  ${count}
   WHILE    ${one} != ${count}
     ${xpath_value}=  Catenate  //div[@id='table_data']//th[text()='Modified When']/following::th[${one}]
+    ${text}=  get text  ${xpath_value}
+    Append To List  ${attributes}  ${text}
+    ${one}=  Evaluate  ${one} + 1
+  END
+
+Get attributes of object2
+   ${count}=  Get Element Count  //th[@class='attribute']
+   ${count}=  Evaluate  ${count} + 1
+   WHILE    ${one} != ${count}
+    ${xpath_value}=  Catenate  (//th[@class='attribute'])[${one}]
     ${text}=  get text  ${xpath_value}
     Append To List  ${attributes}  ${text}
     ${one}=  Evaluate  ${one} + 1
@@ -408,3 +432,48 @@ Click on information button
 Create test cases screenshot
   Set Screenshot Directory  ./test_cases/screenshots
   Capture Page Screenshot
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Check Files In Directory
+  #Аргументы: Имя zip файла, твой "определенный путь", путь до папки в которую разархивируется zip файл
+  [Arguments]  ${file_name}  ${source_path}  ${directory_path}
+  ${file_path}=  Catenate  ${directory_path}/${file_name}
+  ${fileExists}=    File Exists  ${file_path}
+  IF  ${fileExists} is False
+    ${source_path}=  Catenate  ${source_path}/${file_name}
+    Move File  ${source_path}  ${directory_path}
+    Extract Zip  ${file_path}  ${directory_path}
+  END
+
+
+
+
+
+
+
+
+
+
+
+
+
